@@ -1,0 +1,143 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.logo{
+    width: 15vw;
+    margin-top: 1px;
+}
+.headerNavs ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+.headerNavs ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 2vw;
+    letter-spacing: 1px;
+}
+.row1 section p:first-child, .row3{
+    font-size: 6vw;
+    padding: 10vh;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+.row1 section p:last-child{
+    font-size: 2vw;
+    letter-spacing: 0.3vw;
+    margin: 5vh;
+    text-align: center;
+}
+.row2{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.row2 section{
+    position: absolute;
+    color: rgba(245, 245, 245, 1);
+    background-color: rgba(0, 0, 0, 0.39);
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.row2 section h2{
+    font-size: 5vw;
+    letter-spacing: 1vw;
+    font-family: 'Monoton', cursive;
+    text-transform: capitalize;
+}
+.row2 section p{
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+}
+.row4{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    -webkit-scrollbar-width: thin;
+    align-items: center;
+}
+.socialIcons{
+    text-align: center;
+    margin-bottom: 4vh;
+}
+.socialIcons a{
+    text-align: center;
+    color: goldenrod;
+    text-decoration: none;
+    background-color: rgba(245, 245, 245, 0.466);
+    border-radius: 50%;
+    font-size: 5vw;
+    height: 1em;
+    width: 1em;
+    padding: 1vw;
+    margin: 1vw;
+    transition: 500ms;
+}
+.socialIcons a:hover{
+    color: whitesmoke;
+    background-color: darkgoldenrod;
+    opacity: 100%;
+}
+footer{
+    background-color: black;
+    color: grey;
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+}
+footer ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+footer a{
+    text-decoration: none;
+    color: grey;
+    transition: 250ms;
+    padding: 3px;
+    font-size: 2vw;
+}
+footer a:hover{
+    color: goldenrod;
+}
+footer h2{
+    font-size: 3vw;
+    border-bottom: 0.3px solid grey;
+    color: rgba(245, 245, 245, 0.746);
+}
+footer section:last-child ul li a{
+    font-size: 2vw !important;
+}
+.lastStrip{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: grey;
+    border-top: 3px solid rgba(128, 128, 128, 0.2);
+}
+.footerlogo{
+    width: 10vw;
+    padding: 0.5vw;
+    margin: 0.5vw;
+}
+.copyright{
+    font-size: 2vw;
+}
+
