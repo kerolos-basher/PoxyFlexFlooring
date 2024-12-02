@@ -56,24 +56,35 @@ export class HomeComponent   implements OnInit {
   }
 
   @HostListener('window:scroll', [])
+  // onWindowScroll(): void {
+  //   if (!this.isBrowser) return; 
+
+  //   const sections = document.querySelectorAll('.parallax-section');
+
+  //   sections.forEach((section, index) => {
+  //     const rect = section.getBoundingClientRect();
+  //     if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+  //       this.activeSection = index;
+  //     }
+
+  //     if (section instanceof HTMLElement) {
+  //       const offset = window.scrollY * 0.5; 
+  //       section.style.backgroundPositionY = `${offset}px`;
+  //     }
+  //   });
+  // }
   onWindowScroll(): void {
     if (!this.isBrowser) return; 
-
+  
     const sections = document.querySelectorAll('.parallax-section');
-
+  
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-        this.activeSection = index;
-      }
-
-      if (section instanceof HTMLElement) {
-        const offset = window.scrollY * 0.5; 
-        section.style.backgroundPositionY = `${offset}px`;
+        this.activeSection = index; // تحديث القسم النشط
       }
     });
   }
-
   ngOnInit(): void {
     if (this.isBrowser) {
       this.onWindowScroll();

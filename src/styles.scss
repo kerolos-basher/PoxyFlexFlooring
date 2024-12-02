@@ -6,27 +6,78 @@ body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  
-  .navbar {
+  .navbar-container {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: #004225;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    width: 100%; /* يغطي كامل عرض الشاشة */
+    height: 120px; /* ارتفاع الهيدر */
+    background: linear-gradient(to right, #01391d, #025a34); /* التدرج اللوني */
     z-index: 10;
-  }
-  
+}
+
+.navbar {
+    position: relative; /* السماح بتحريك العناصر داخلياً باستخدام relative */
+    width: 100%; /* عرض كامل للنافبار */
+    max-width: 1200px; /* الحد الأقصى للعرض */
+    height: 100%; /* يأخذ ارتفاع الحاوية */
+    margin: 0 auto; /* توسيط الحاوية الرئيسية */
+}
+
+.navbar .menu {
+    position: absolute; /* تحكم بحرية */
+    left: 20px; /* تحريك العنصر إلى اليسار */
+    top: 50%; /* وضع العنصر في منتصف الهيدر عمودياً */
+    transform: translateY(-50%); /* توسيط عمودياً */
+    font-size: 24px; /* تكبير حجم الخط */
+    color: white;
+}
+
+.navbar .logo {
+    position: absolute; /* تحكم بحرية */
+    left: 50%; /* وضع العنصر في منتصف العرض */
+    top: 50%; /* وضع العنصر في منتصف الهيدر عمودياً */
+    transform: translate(-50%, -50%); /* توسيط عمودياً وأفقياً */
+}
+
+.navbar .logo img {
+    height: 100px; /* تكبير الشعار */
+    width: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+.navbar .nav-icons {
+    position: absolute; /* تحكم بحرية */
+    right: 20px; /* محاذاة إلى اليمين */
+    top: 50%; /* وضع العنصر في منتصف الهيدر عمودياً */
+    transform: translateY(-50%); /* توسيط عمودياً */
+    display: flex;
+    align-items: center;
+    gap: 20px; /* المسافة بين الأيقونات */
+}
+
+.navbar .nav-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* تكبير النص */
+    gap: 10px; /* المسافة بين النص والأيقونة */
+}
+.navbar .nav-icon i {
+    font-size: 20px; /* تكبير الأيقونة */
+}
   .navbar .menu {
     font-size: 18px;
   }
   
-  .navbar .logo img {
-    height: 30px;
-  }
+  .navbar .logo {
+    margin-left: -40px; /* تأكد من أن المارجن الافتراضي لا يعيق الحركة */
+    // transform: translateX(-10px); /* تحريك الشعار إلى اليسار */
+}
+
+.navbar .logo img {
+    height: 50px; /* ضبط ارتفاع الشعار */
+    width: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
   
   .parallax-section {
     position: relative;
@@ -90,16 +141,42 @@ body, html {
   }
   
   .slider-dot {
-    width: 3px; /* عرض الشريط */
-    height: 30px; /* ارتفاع الشريط */
+    width: 4px; 
+    height: 15px; 
     background-color: white;
     opacity: 0.5;
     margin: 5px 0;
-    transition: opacity 0.3s;
+    border-radius: 10px; 
+    transition: all 0.3s ease; 
   }
   
   .slider-dot.active {
+    width: 4px; 
+    height: 50px; 
     opacity: 1;
-    background-color: white; /* لون الشريط النشط */
+    border-radius: 10px; 
+    background-color: white;
   }
   
+  .scroll-indicator {
+    position: absolute;
+    bottom: 15px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    font-size: 24px; 
+    color: white; 
+    cursor: pointer;
+    animation: bounce 2s infinite; 
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translate(-50%, 0); 
+    }
+    40% {
+      transform: translate(-50%, 10px); 
+    }
+    60% {
+      transform: translate(-50%, 5px); 
+    }
+  }
