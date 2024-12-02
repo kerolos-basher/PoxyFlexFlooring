@@ -1,143 +1,105 @@
-body{
-    padding: 0px;
-    margin: 0px;
-}
-header{
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #004225;
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    position: absolute;
-    z-index: 1;
-    width: 100vw;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-.logo{
-    width: 15vw;
-    margin-top: 1px;
-}
-.headerNavs ul{
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-}
-.headerNavs ul li a{
-    text-decoration: none;
-    color: whitesmoke;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    font-size: 2vw;
-    letter-spacing: 1px;
-}
-.row1 section p:first-child, .row3{
-    font-size: 6vw;
-    padding: 10vh;
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-}
-.row1 section p:last-child{
-    font-size: 2vw;
-    letter-spacing: 0.3vw;
-    margin: 5vh;
-    text-align: center;
-}
-.row2{
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+  }
+  
+  .navbar .menu {
+    font-size: 18px;
+  }
+  
+  .navbar .logo img {
+    height: 30px;
+  }
+  
+  .parallax-section {
     position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-.row2 section{
+    overflow: hidden;
+  }
+  
+  .background-video {
     position: absolute;
-    color: rgba(245, 245, 245, 1);
-    background-color: rgba(0, 0, 0, 0.39);
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-.row2 section h2{
-    font-size: 5vw;
-    letter-spacing: 1vw;
-    font-family: 'Monoton', cursive;
-    text-transform: capitalize;
-}
-.row2 section p{
-    font-size: 2vw;
-    letter-spacing: 0.5vw;
-}
-.row4{
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: thin;
-    -webkit-scrollbar-width: thin;
-    align-items: center;
-}
-.socialIcons{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .text-overlay {
     text-align: center;
-    margin-bottom: 4vh;
-}
-.socialIcons a{
-    text-align: center;
-    color: goldenrod;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  
+  .text-overlay h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .text-overlay h1 {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .text-overlay .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
     text-decoration: none;
-    background-color: rgba(245, 245, 245, 0.466);
-    border-radius: 50%;
-    font-size: 5vw;
-    height: 1em;
-    width: 1em;
-    padding: 1vw;
-    margin: 1vw;
-    transition: 500ms;
-}
-.socialIcons a:hover{
-    color: whitesmoke;
-    background-color: darkgoldenrod;
-    opacity: 100%;
-}
-footer{
-    background-color: black;
-    color: grey;
+    border-radius: 5px;
+  }
+  
+  /* Slider على يمين الشاشة */
+  .slider {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
     display: flex;
-    text-align: left;
-    justify-content: space-around;
-}
-footer ul{
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-}
-footer a{
-    text-decoration: none;
-    color: grey;
-    transition: 250ms;
-    padding: 3px;
-    font-size: 2vw;
-}
-footer a:hover{
-    color: goldenrod;
-}
-footer h2{
-    font-size: 3vw;
-    border-bottom: 0.3px solid grey;
-    color: rgba(245, 245, 245, 0.746);
-}
-footer section:last-child ul li a{
-    font-size: 2vw !important;
-}
-.lastStrip{
-    background-color: black;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    color: grey;
-    border-top: 3px solid rgba(128, 128, 128, 0.2);
-}
-.footerlogo{
-    width: 10vw;
-    padding: 0.5vw;
-    margin: 0.5vw;
-}
-.copyright{
-    font-size: 2vw;
-}
-
+  }
+  
+  .slider-dot {
+    width: 3px; /* عرض الشريط */
+    height: 30px; /* ارتفاع الشريط */
+    background-color: white;
+    opacity: 0.5;
+    margin: 5px 0;
+    transition: opacity 0.3s;
+  }
+  
+  .slider-dot.active {
+    opacity: 1;
+    background-color: white; /* لون الشريط النشط */
+  }
+  
