@@ -1,63 +1,55 @@
-
-
 <div class="navbar-container">
     
-    <div class="navbar">
-      <div class="menu">
+    <div class="navbar row">
+      <div class="menu col-4">
         <span>☰ Menu</span>
       </div>
-      <div class="logo">
-        <img src="assets/images/image1.jpg" alt="Logo">
+      <div class="logo col-4">
+        <img class="p-2" src="assets/images/logo.png" alt="Logo">
       </div>
-      <div class="nav-icons">
+      <div class="nav-icons col-4">
         <a href="#" class="nav-icon">
-          <i class="fa fa-search"></i> Search
+          <i class="fa fa-search"></i>
         </a>
         <a href="#" class="nav-icon">
-          <i class="fa fa-map-marker"></i> Store locator
+          <i class="fa fa-map-marker"></i>
         </a>
         <a href="#" class="nav-icon">
-          <i class="fa fa-heart"></i> Favorites
+          <i class="fa fa-heart"></i>
         </a>
       </div>
     </div>
   
-  </div>
+</div>
  
-  <div class="slider">
+<div class="slider">
+
+  <div
+    class="slider-dot"
+    *ngFor="let section of sections; let i = index"
+    [class.active]="i === activeSection"
+  ></div>
   
-    <div
-      class="slider-dot"
-      *ngFor="let section of sections; let i = index"
-      [class.active]="i === activeSection"
-    ></div>
-    
-  </div>
-  <div class="scroll-indicator">
+</div>
+
+<div class="scroll-indicator">
   <i class="fa fa-chevron-down"></i>
 </div>
   <!-- الأقسام -->
-  <div
-    class="parallax-section"
-    *ngFor="let section of sections; let i = index"
-    [style.backgroundImage]="section.type === 'image' ? 'url(' + section.url + ')' : null"
-  >
-  <div class="scroll-indicator">
-    <i class="fa fa-chevron-down"></i>
-  </div>
-    <video
-      *ngIf="section.type === 'video'"
-      autoplay
-      muted
-      loop
-      class="background-video"
-    >
-      <source [src]="section.url" type="video/webm" />
+<div class="parallax-section" *ngFor="let section of sections; 
+     let i = index"[style.backgroundImage]="section.type === 'image' ? 
+     'url(' + section.url + ')' : null">
+  
+    <div class="scroll-indicator">
+        <i class="fa fa-chevron-down"></i>
+    </div>
+    <video *ngIf="section.type === 'video'"  autoplay  muted loop class="background-video">
+        <source [src]="section.url" type="video/webm" />
     </video>
     <div class="text-overlay">
-      <h2>{{ section.subtitle }}</h2>
-      <h1>{{ section.title }}</h1>
-      <a href="#" class="btn">Learn More</a>
+        <h2>{{ section.subtitle }}</h2>
+        <h1>{{ section.title }}</h1>
+        <a href="#" class="btn">Learn More</a>
     </div>
-  </div>
+</div>
   
