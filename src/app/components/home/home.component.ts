@@ -1,21 +1,17 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ModalComponent } from "../modal/modal.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    imports: [CommonModule, ModalComponent]
 })
 export class HomeComponent   implements OnInit {
   sections = [
-    {
-      type: 'image',
-      url: 'assets/images/image1.jpg',
-      title: 'Day-Date',
-      subtitle: 'OYSTER PERPETUAL',
-    },
+   
     {
       type: 'video',
       url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
@@ -47,7 +43,17 @@ export class HomeComponent   implements OnInit {
       subtitle: '',
     },
   ];
+  isModalOpen = false;
+  selectedSection: any;
 
+  openModal() {
+   
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
   activeSection = 0;
   isBrowser: boolean;
 
@@ -56,23 +62,7 @@ export class HomeComponent   implements OnInit {
   }
 
   @HostListener('window:scroll', [])
-  // onWindowScroll(): void {
-  //   if (!this.isBrowser) return; 
 
-  //   const sections = document.querySelectorAll('.parallax-section');
-
-  //   sections.forEach((section, index) => {
-  //     const rect = section.getBoundingClientRect();
-  //     if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-  //       this.activeSection = index;
-  //     }
-
-  //     if (section instanceof HTMLElement) {
-  //       const offset = window.scrollY * 0.5; 
-  //       section.style.backgroundPositionY = `${offset}px`;
-  //     }
-  //   });
-  // }
   onWindowScroll(): void {
     if (!this.isBrowser) return; 
   
@@ -90,4 +80,5 @@ export class HomeComponent   implements OnInit {
       this.onWindowScroll();
     }
   }
+  
 }

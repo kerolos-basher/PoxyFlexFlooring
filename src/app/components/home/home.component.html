@@ -36,6 +36,19 @@
   <i class="fa fa-chevron-down"></i>
 </div>
   <!-- الأقسام -->
+
+  <div class="parallax-section" style="background-image: url('assets/images/image1.jpg')">
+    <div class="scroll-indicator">
+      <i class="fa fa-chevron-down"></i>
+    </div>
+  
+    <div class="text-overlay">
+      <h2>OYSTER PERPETUAL</h2>
+      <h1>Day-Date</h1>
+      <a href="#" class="btn" (click)="openModal()">Learn More</a>
+    </div>
+  </div>
+
 <div class="parallax-section" *ngFor="let section of sections; 
      let i = index"[style.backgroundImage]="section.type === 'image' ? 
      'url(' + section.url + ')' : null">
@@ -54,6 +67,7 @@
 </div>
 
 
+<app-modal *ngIf="isModalOpen" [data]="selectedSection" (close)="closeModal()"></app-modal>
 
 <footer>
         <div class="footer-logo">

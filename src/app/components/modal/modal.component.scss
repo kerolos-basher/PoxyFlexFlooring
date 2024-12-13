@@ -1,0 +1,43 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Start from the bottom */
+    z-index: 1000;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in effect */
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    padding: 40px;
+    max-width: 90%; /* Set width relative to the screen */
+    height: 80%; /* Occupy more height */
+    width: 1500px;
+    transform: translateY(100%);
+    animation: slideUp 0.5s ease-out forwards; /* Slide-in from bottom */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
