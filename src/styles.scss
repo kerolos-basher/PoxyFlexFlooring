@@ -44,7 +44,9 @@ body, html {
     height: 100px; /* تكبير الشعار */
     width: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
 }
-
+.Modal-text{
+  color: #4250AA;
+}
 .navbar .nav-icons {
     position: absolute; /* تحكم بحرية */
     right: 20px; /* محاذاة إلى اليمين */

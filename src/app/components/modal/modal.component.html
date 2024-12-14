@@ -1,27 +1,27 @@
 <div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   <div class="modal-content" (click)="$event.stopPropagation()">
- 
+    <div class="Modal-text">
+      <h2> Transforming Floors, Walls, and Spaces Beyond Imagination.</h2>
+    </div>
+    
     <div class="slider-container">
       <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * 100 + '%)'">
         <div class="slide" *ngFor="let image of images">
-          <img [src]="image" alt="Slide">
+          <img [src]="image" class="" alt="Slide">
         </div>
       </div>
       <div class="prev-button" (click)="prevSlide()">&#8249;</div>
       <div class="next-button" (click)="nextSlide()">&#8250;</div>
     </div>
-
-    <div class="text-section">
-      <h2>Watches Unveiled in 2024</h2>
-      <p>
-        Watches unveiled in 2024 illustrated yet again our constant quest for
-        innovation and excellence. Among them are new versions of the
-        GMT-Master II, exclusive dials for the Day-Date, a 1908 in 950
-        platinum, 18kt gold Jubilee bracelets for the Sky-Dweller, as well as
-        gem-set versions of the Cosmograph Daytona, and the Rolex Explorer.
-      </p>
+    <div class="modal-footer">
+     <h1 class="Modal-text" >For over 14 years, we have been creating art with epoxy. </h1>
+     <h1 class="Modal-text"> Jackys Home Decor is the global leader in providing epoxy flooring and wall solutions.
+         Based in Manhattan, New York, we serve clients worldwide to bring their visions to life in stunning reality</h1>
     </div>
-
-    <button mat-button color="warn" (click)="closeModal()">Close</button>
   </div>
 </div>
