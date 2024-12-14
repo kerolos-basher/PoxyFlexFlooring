@@ -12,10 +12,10 @@ import { CommonModule } from '@angular/common';
 export class ModalComponent {
   @Output() close = new EventEmitter<void>();
   images: string[] = [
-    '/assets/images/floor1.jpg',
-    '/assets/images/Church.jpg',
-    '/assets/images/Garage.jpg',
-    '/assets/images/Room.jpg',
+    '/assets/images/floor1_resized_1000x1000.jpg',
+    '/assets/images/Room_resized_1000x1000.jpg',
+    //'/assets/images/Garage.jpg',
+    //'/assets/images/Room.jpg',
   ];
   activeSlideIndex = 0;
   
