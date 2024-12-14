@@ -6,14 +6,27 @@ body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
-  .navbar-container {
-    position: fixed;
-    top: 0;
-    width: 100%; /* يغطي كامل عرض الشاشة */
-    height: 120px; /* ارتفاع الهيدر */
-    background: 	#30265c;
-    //linear-gradient(to right, #01391d, #025a34); /* التدرج اللوني */
-    z-index: 10;
+//   .navbar-container {
+//     position: fixed;
+//     top: 0;
+//     width: 100%; /* يغطي كامل عرض الشاشة */
+//     height: 120px; /* ارتفاع الهيدر */
+//     background: 	#30265c;
+//     //linear-gradient(to right, #01391d, #025a34); /* التدرج اللوني */
+//     z-index: 10;
+// }
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background: #30265c;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.navbar-container.hide {
+  transform: translateY(-120%);
 }
 
 .navbar {

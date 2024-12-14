@@ -1,15 +1,19 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule,CommonModule],
+  imports: [CommonModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
+  @ViewChild('videoModal', { static: true }) videoModal: any;
+
+  constructor(private modalService: NgbModal) {}
+  
   @Output() close = new EventEmitter<void>();
   images: string[] = [
     '/assets/images/floor1.jpg',
@@ -18,22 +22,6 @@ export class ModalComponent {
     '/assets/images/Room.jpg',
   ];
   activeSlideIndex = 0;
-  
-  // nextSlide() {
-  //   if (this.activeSlideIndex < this.images.length - 1) {
-  //     this.activeSlideIndex++;
-  //   } else {
-  //     this.activeSlideIndex = 0; // Loop back to the first slide
-  //   }
-  // }
-  
-  // prevSlide() {
-  //   if (this.activeSlideIndex > 0) {
-  //     this.activeSlideIndex--;
-  //   } else {
-  //     this.activeSlideIndex = this.images.length - 1; // Loop to the last slide
-  //   }
-  // }
   imagesPerView = 3; 
   nextSlide() {
     if (this.activeSlideIndex < this.images.length - 1) {
@@ -52,5 +40,10 @@ export class ModalComponent {
   }
   closeModal() {
     this.close.emit();
+  }
+
+
+  openModal() {
+    this.modalService.open(this.videoModal, { size: 'lg', centered: true });
   }
 }

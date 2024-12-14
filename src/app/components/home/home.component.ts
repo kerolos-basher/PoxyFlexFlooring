@@ -81,6 +81,22 @@ export class HomeComponent implements OnInit {
         this.activeSection = index; // تحديث القسم النشط
       }
     });
+
+
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar-container');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        navbar?.classList.add('hide');
+      } else {
+        // Scrolling up
+        navbar?.classList.remove('hide');
+      }
+      lastScrollY = window.scrollY;
+    });
+
   }
   ngOnInit(): void {
     if (this.isBrowser) {
