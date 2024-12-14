@@ -1,43 +1,100 @@
+
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Start from the bottom */
-    z-index: 1000;
-    overflow: hidden;
-    animation: fadeIn 0.3s ease-in-out; /* Fade-in effect */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Increased height for larger images */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider2 {
+  display: flex;
+  transition: transform 0.8s ease-in-out; /* Smooth sliding effect */
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes up 100% of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 90%; /* Make images larger */
+  max-height: 90%; /* Ensure they fit within the container */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Slightly larger navigation buttons */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Make arrow icons larger */
+}
+
+.prev-button {
+  left: 15px;
+}
+
+.next-button {
+  right: 15px;
+}
+
+@media (max-width: 768px) {
   .modal-content {
-    background: #fff;
-    border-radius: 16px 16px 0 0;
-    padding: 40px;
-    max-width: 90%; /* Set width relative to the screen */
-    height: 80%; /* Occupy more height */
-    width: 1500px;
-    transform: translateY(100%);
-    animation: slideUp 0.5s ease-out forwards; /* Slide-in from bottom */
+    width: 95%;
   }
-  
-  @keyframes fadeIn {
-    from {
-      background-color: rgba(0, 0, 0, 0);
-    }
-    to {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+
+  .slider-container {
+    height: 250px; /* Adjust for smaller screens */
   }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
+
+  .prev-button,
+  .next-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
+}

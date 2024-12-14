@@ -1,43 +1,58 @@
 {
-  "hash": "06feb4d8",
-  "configHash": "09e83afd",
+  "hash": "592bd1a6",
+  "configHash": "1dda25ab",
   "lockfileHash": "5d61c47d",
-  "browserHash": "43d965e8",
+  "browserHash": "9c84a8a6",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "21ecdbd4",
+      "fileHash": "e19f7c0a",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "3491258c",
+      "fileHash": "f3dbabe4",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "dd494ff5",
+      "fileHash": "2339040c",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "844e36dc",
+      "fileHash": "dc713dec",
+      "needsInterop": false
+    },
+    "@angular/material/icon": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/icon.mjs",
+      "file": "@angular_material_icon.js",
+      "fileHash": "746e1ed2",
+      "needsInterop": false
+    },
+    "@angular/material/button": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/button.mjs",
+      "file": "@angular_material_button.js",
+      "fileHash": "b0748254",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-A6RJJMOL": {
-      "file": "chunk-A6RJJMOL.js"
+    "chunk-4W6ZJSCL": {
+      "file": "chunk-4W6ZJSCL.js"
     },
-    "chunk-XFCOUONH": {
-      "file": "chunk-XFCOUONH.js"
+    "chunk-4ES7UK7V": {
+      "file": "chunk-4ES7UK7V.js"
     },
-    "chunk-5FUJWLSI": {
-      "file": "chunk-5FUJWLSI.js"
+    "chunk-MOGILD44": {
+      "file": "chunk-MOGILD44.js"
+    },
+    "chunk-GS7ETHKW": {
+      "file": "chunk-GS7ETHKW.js"
     }
   }
 }

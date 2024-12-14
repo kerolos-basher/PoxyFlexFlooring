@@ -1,16 +1,16 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { ModalComponent } from "../modal/modal.component";
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-epoxy-flakes-flooring',
   standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  imports: [CommonModule, ModalComponent,RouterModule]
+  imports: [CommonModule, ModalComponent, RouterModule],
+  templateUrl: './epoxy-flakes-flooring.component.html',
+  styleUrl: './epoxy-flakes-flooring.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class EpoxyFlakesFlooringComponent {
   sections = [
 
     {
@@ -86,5 +86,6 @@ export class HomeComponent implements OnInit {
       this.onWindowScroll();
     }
   }
+
 
 }
