@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
   openModal() {
 
     this.isModalOpen = true;
+    document.body.classList.add('modal-open');
   }
 
   closeModal() {

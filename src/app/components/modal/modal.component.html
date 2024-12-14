@@ -1,27 +1,60 @@
-<div class="modal-overlay" (click)="closeModal()">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <div class="Modal-text">
-      <h2> Transforming Floors, Walls, and Spaces Beyond Imagination.</h2>
-    </div>
-    
-    <div class="slider-container">
-      <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * 100 + '%)'">
-        <div class="slide" *ngFor="let image of images">
-          <img [src]="image" class="" alt="Slide">
+<div class="container text-center">
+  <div class="modal-overlay " (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+
+
+      <button type="button" class="close-button" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+
+
+      <div class="Modal-text">
+        <h2>
+          Transforming Floors, Walls, and Spaces Beyond Imagination.
+        </h2>
+      </div>
+
+
+
+      <div mat-dialog-content>
+        <div class="video-section">
+          <video autoplay muted loop class="background-video">
+            <source src="/assets/videos/1111.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+
+
+        <div class="slider-container">
+          <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * (100 / imagesPerView) + '%)'">
+            <div class="slide" *ngFor="let image of images">
+              <img [src]="image" class alt="Slide">
+            </div>
+          </div>
+          <div class="prev-button" (click)="prevSlide()">
+            &#8249;
+          </div>
+          <div class="next-button" (click)="nextSlide()">
+            &#8250;
+          </div>
+        </div>
+
+
+
+        <div class="modal-footer">
+          <h1 class="Modal-text">
+            For over 14 years, we have been creating art with epoxy.
+          </h1>
+          <h1 class="Modal-text">
+            Jackys Home Decor is the global leader in providing epoxy flooring and wall solutions.
+            Based in Manhattan, New York, we serve clients worldwide to bring their visions to life
+            in stunning reality.
+          </h1>
         </div>
       </div>
-      <div class="prev-button" (click)="prevSlide()">&#8249;</div>
-      <div class="next-button" (click)="nextSlide()">&#8250;</div>
-    </div>
-    <div class="modal-footer">
-     <h1 class="Modal-text" >For over 14 years, we have been creating art with epoxy. </h1>
-     <h1 class="Modal-text"> Jackys Home Decor is the global leader in providing epoxy flooring and wall solutions.
-         Based in Manhattan, New York, we serve clients worldwide to bring their visions to life in stunning reality</h1>
     </div>
   </div>
 </div>
