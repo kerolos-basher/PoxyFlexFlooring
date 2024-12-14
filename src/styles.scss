@@ -5,16 +5,10 @@ body, html {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;
   }
-//   .navbar-container {
-//     position: fixed;
-//     top: 0;
-//     width: 100%; /* يغطي كامل عرض الشاشة */
-//     height: 120px; /* ارتفاع الهيدر */
-//     background: 	#30265c;
-//     //linear-gradient(to right, #01391d, #025a34); /* التدرج اللوني */
-//     z-index: 10;
-// }
+
 .navbar-container {
   position: fixed;
   top: 0;
