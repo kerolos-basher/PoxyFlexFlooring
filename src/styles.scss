@@ -251,3 +251,11 @@ footer {
     opacity: 0.7;
 }
 
+body.modal-open {
+  overflow: hidden; /* Hides all scrollbars */
+}
+
+/* Ensure modal content is scrollable */
+.modal-overlay {
+  overflow-y: auto; /* Allow scrolling inside the modal */
+}
