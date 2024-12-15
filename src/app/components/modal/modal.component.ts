@@ -30,14 +30,15 @@ export class ModalComponent {
   ];
   activeSlideIndex = 0;
   imagesPerView = 3; 
-  nextSlide() {
-    if (this.activeSlideIndex < this.images.length - 1) {
-      this.activeSlideIndex++;
-    } else {
-      this.activeSlideIndex = 0; // Loop back to the first slide
-    }
-  }
 
+  nextSlide() {
+    if (this.activeSlideIndex < this.images.length - this.imagesPerView) {
+      this.activeSlideIndex++;
+    }
+   else {
+        this.activeSlideIndex = 0; // Loop back to the first slide
+      }
+  }
   prevSlide() {
     if (this.activeSlideIndex > 0) {
       this.activeSlideIndex--;

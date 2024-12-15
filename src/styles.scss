@@ -9,8 +9,11 @@ body, html {
     scrollbar-width: none;
   }
 
+  
 .navbar-container {
-  position: fixed;
+  position: relative;
+  z-index: 1000; /* Higher than modal to keep it above */
+
   top: 0;
   width: 100%;
   height: 120px;

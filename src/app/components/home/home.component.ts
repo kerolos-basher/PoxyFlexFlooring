@@ -103,5 +103,11 @@ export class HomeComponent implements OnInit {
       this.onWindowScroll();
     }
   }
-
+  scrollToSection(index: number): void {
+    const sections = document.querySelectorAll('.parallax-section');
+    if (sections[index]) {
+      sections[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      this.activeSection = index; // Update the active section
+    }
+  }
 }
