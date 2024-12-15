@@ -16,10 +16,17 @@ export class ModalComponent {
   
   @Output() close = new EventEmitter<void>();
   images: string[] = [
-    '/assets/images/floor1_resized_1000x1000.jpg',
-    '/assets/images/Room_resized_1000x1000.jpg',
-    //'/assets/images/Garage.jpg',
-    //'/assets/images/Room.jpg',
+    '/assets/images/before.jpg',
+    '/assets/images/before2.jpg',
+    '/assets/images/before3.jpg',
+    '/assets/images/after1.jpg',
+    '/assets/images/after2.jpg',
+    '/assets/images/floor.jpg',
+    '/assets/images/Room.jpg',
+    '/assets/images/Church.png',
+    '/assets/images/Garage.jpg',
+    '/assets/images/floor.jpg',
+    '/assets/images/Room.jpg',
   ];
   activeSlideIndex = 0;
   imagesPerView = 3; 
