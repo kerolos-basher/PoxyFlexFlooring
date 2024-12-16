@@ -13,10 +13,9 @@ body, html {
 .navbar-container {
   position: relative;
   z-index: 1000; /* Higher than modal to keep it above */
-
   top: 0;
   width: 100%;
-  height: 120px;
+  height: 100px;
   background: #30265c;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
@@ -63,6 +62,7 @@ body, html {
     top: 50%; /* وضع العنصر في منتصف الهيدر عمودياً */
     transform: translateY(-50%); /* توسيط عمودياً */
     display: flex;
+    margin-right: 10px;
     align-items: center;
     gap: 20px; /* المسافة بين الأيقونات */
 }
