@@ -50,7 +50,9 @@ mat-dialog-actions {
   align-items: center;
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  z-index: 999;
+  z-index: 1200;
+  bottom: -100%;
+  transition: bottom 6.7s ease-in-out; /* Animation time */
 }
 .modal-content {
   background: #fff;
