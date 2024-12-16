@@ -1,66 +1,88 @@
 <div class="container text-center">
+ 
   <div class="modal-overlay " (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
-
-
-
       <button type="button" class="close-button" aria-label="Close" (click)="closeModal()">
         <span aria-hidden="true">&times;</span>
       </button>
-
-
-
       <div class="Modal-text">
         <h2>
           Transforming Floors, Walls, and Spaces Beyond Imagination.
         </h2>
       </div>
 
+      <!-- <div class="container text-center">
+
+        <div class="video-thumbnail" (click)="openVideo()" [ngClass]="{'fullscreen': isFullScreen}">
+
+          <img src="assets/images/Home.jpg" alt="Video Thumbnail" class="thumbnail-image">
+      
+   
+          <button class="play-button" aria-label="Play Video">
+            <span>&#9658; Play the video</span>
+          </button>
+          <video #videoPlayer [class.video-fullscreen]="isFullScreen" controls *ngIf="isFullScreen">
+            <source src="assets/videos/IMG_9501.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div> -->
+
+      <div class="container text-center">
+        <!-- Video Thumbnail -->
+        <div class="video-thumbnail" (click)="openVideo()" [ngClass]="{'fullscreen': isFullScreen}">
+          <img src="assets/images/Home.jpg" alt="Video Thumbnail" class="thumbnail-image">
+          <button class="play-button" aria-label="Play Video">
+            <span>&#9658; Play the video</span>
+          </button>
+        </div>
+      
+        <!-- Video Element (Always Rendered, Toggled with Visibility) -->
+        <video 
+          #videoPlayer 
+          [hidden]="!isFullScreen" 
+          class="video-fullscreen" 
+          
+          controls
+          (fullscreenchange)="handleFullscreenChange()">
+          <source src="assets/videos/IMG_9501.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
 
-        <div class="video-section">
-          <div class="modal-header">
-            <h5 class="modal-title"></h5>
-          </div>
-          <div class="modal-body">
-            <video controls >
-              <source src="/assets/videos/IMG_9501.mov" type="video/mp4" />
-            </video>
+      <div class="slider-container">
+        <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * (100 / imagesPerView) + '%)'">
+          <div class="slide" *ngFor="let image of images">
+            <img [src]="image" class alt="Slide">
           </div>
         </div>
-
-        <div class="slider-container">
-          <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * (100 / imagesPerView) + '%)'">
-            <div class="slide" *ngFor="let image of images">
-              <img [src]="image" class alt="Slide">
-            </div>
-          </div>
-          <div class="prev-button" (click)="prevSlide()">
-            &#8249;
-          </div>
-          <div class="next-button" (click)="nextSlide()">
-            &#8250;
-          </div>
+        <div class="prev-button" (click)="prevSlide()">
+          &#8249;
         </div>
+        <div class="next-button" (click)="nextSlide()">
+          &#8250;
+        </div>
+      </div>
 
 
 
-        <div class="modal-footer">
-          <h1 class="Modal-text">
-            For over 14 years, we have been creating art with epoxy.
-          </h1>
-          <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-              <h1 class="Modal-text">
-                Jackys Home Decor is the global leader in providing epoxy flooring and wall solutions.
-                Based in Manhattan, New York, we serve clients worldwide to bring their visions to life
-                in stunning reality.
-              </h1>
-            </div>
-            <div class="col-2"></div>
+      <div class="modal-footer">
+        <h1 class="Modal-text">
+          For over 14 years, we have been creating art with epoxy.
+        </h1>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <h1 class="Modal-text">
+              Jackys Home Decor is the global leader in providing epoxy flooring and wall solutions.
+              Based in Manhattan, New York, we serve clients worldwide to bring their visions to life
+              in stunning reality.
+            </h1>
           </div>
+          <div class="col-2"></div>
         </div>
       </div>
     </div>
   </div>
+</div>

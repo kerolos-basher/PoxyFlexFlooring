@@ -1,0 +1,29 @@
+.footer-share {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icons */
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-share-text {
+    font-weight: bold;
+    color: #333; /* Text color */
+    font-size: 16px;
+    margin: 2%;
+  }
+  
+  .footer-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .footer-icons fa-icon {
+    font-size: 18px; /* Adjust icon size */
+    color: #0b6838; /* Green color as seen in the image */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .footer-icons fa-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
+  }

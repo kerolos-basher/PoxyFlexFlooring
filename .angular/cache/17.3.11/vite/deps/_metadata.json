@@ -1,58 +1,73 @@
 {
-  "hash": "d636314b",
-  "configHash": "04993520",
-  "lockfileHash": "6705453f",
-  "browserHash": "3d1b4eaa",
+  "hash": "311c7ed8",
+  "configHash": "eee0e110",
+  "lockfileHash": "157678e6",
+  "browserHash": "46d6b5e5",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "96d47509",
+      "fileHash": "37d484cb",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c3f9dfbc",
+      "fileHash": "b7ba5b45",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "1a52599d",
+      "fileHash": "cb93245c",
       "needsInterop": false
     },
     "@angular/platform-browser/animations/async": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
       "file": "@angular_platform-browser_animations_async.js",
-      "fileHash": "48a7fbed",
+      "fileHash": "e96a49d4",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "3131ff1a",
+      "fileHash": "e2375eb8",
+      "needsInterop": false
+    },
+    "@fortawesome/angular-fontawesome": {
+      "src": "../../../../../node_modules/@fortawesome/angular-fontawesome/fesm2022/angular-fontawesome.mjs",
+      "file": "@fortawesome_angular-fontawesome.js",
+      "fileHash": "c15a1623",
+      "needsInterop": false
+    },
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../../../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "8bf920e0",
       "needsInterop": false
     },
     "@ng-bootstrap/ng-bootstrap": {
       "src": "../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
       "file": "@ng-bootstrap_ng-bootstrap.js",
-      "fileHash": "ef34595f",
+      "fileHash": "5e6395d2",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-4HPGW6XK": {
-      "file": "chunk-4HPGW6XK.js"
+    "browser-6P47UF7I": {
+      "file": "browser-6P47UF7I.js"
     },
-    "browser-YNTPV34F": {
-      "file": "browser-YNTPV34F.js"
+    "chunk-PPXX63VP": {
+      "file": "chunk-PPXX63VP.js"
     },
-    "chunk-JCICXXPS": {
-      "file": "chunk-JCICXXPS.js"
+    "chunk-JBPUFPXV": {
+      "file": "chunk-JBPUFPXV.js"
     },
-    "chunk-O75S2LSV": {
-      "file": "chunk-O75S2LSV.js"
+    "chunk-R3QC6MHM": {
+      "file": "chunk-R3QC6MHM.js"
+    },
+    "chunk-J4B6MK7R": {
+      "file": "chunk-J4B6MK7R.js"
     }
   }
 }
