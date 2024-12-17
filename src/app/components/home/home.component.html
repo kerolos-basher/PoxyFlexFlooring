@@ -33,6 +33,7 @@
 </div>
 
 <div class="slider">
+  
   <div class="slider-dot" *ngFor="let section of sections; let i = index" [class.active]="i === activeSection"
     (click)="scrollToSection(i)"></div>
 </div>
@@ -52,12 +53,14 @@
 
 
   <div class="text-overlay">
-    <h1>Jackys Home Decor</h1>
+    <h1>Epoxy Flakes Flooring</h1>
 
-
-    <h2>
+  <!-- 
+     <h2>
       Transforming Floors, Walls, and Spaces Beyond Imagination
     </h2>
+  -->
+   
     <a href="#" class="btn" (click)="openModal()">
       Learn More
     </a>
@@ -77,7 +80,7 @@
     <source [src]="section.url" type="video/webm">
   </video>
   <div class="text-overlay">
-    <h2>{{ section.subtitle }}</h2>
+   <!--<h2>{{ section.subtitle }}</h2>--> 
     <h1>{{ section.title }}</h1>
     <a [routerLink]="section.redirectTo" class="btn">
       Learn More

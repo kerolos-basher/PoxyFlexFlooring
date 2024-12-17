@@ -4,6 +4,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { 
   faFacebookF, 
+  faInstagram,
   faXTwitter, 
   faLinkedinIn, 
   faPinterestP, 
@@ -19,7 +20,7 @@ import {
 })
 export class AppComponent {
   constructor(library: FaIconLibrary){
-    library.addIcons(faFacebookF, faXTwitter, faLinkedinIn, faPinterestP, faWeibo);
+    library.addIcons(faFacebookF,faInstagram, faXTwitter, faLinkedinIn, faPinterestP, faWeibo);
 
   }
   title = 'PoxyFlexFlooring';
