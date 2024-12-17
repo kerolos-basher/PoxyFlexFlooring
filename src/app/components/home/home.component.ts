@@ -12,7 +12,13 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   sections = [
-
+    {
+      type: 'image',
+      url: 'assets/images/Home.jpg',
+      title: 'Epoxy Flakes Flooring',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
+    },
     {
       type: 'video',
       url: 'assets/videos/MarbleVideo.mp4',
@@ -40,14 +46,7 @@ export class HomeComponent implements OnInit {
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'epoxy-marble-floors-and-walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/churchMarble3.jpg',
-      title: 'Epoxy Marble Floors & Wallss',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
-    },
+    }
   ];
   isModalOpen = false;
   selectedSection: any;
