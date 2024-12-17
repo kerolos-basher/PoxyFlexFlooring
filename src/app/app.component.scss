@@ -29,4 +29,27 @@
     transform: scale(1.2); /* Slightly enlarge icons on hover */
   }
 
+.epoxy-footer
+{
+display: flex;
+background-color: #c0c0c0;;
 
+}
+.epoxy-footer-left{
+  margin: 2%;
+  padding-left: 6%;
+  align-items: center;
+  color: black;
+}
+.epoxy-footer-right{
+  margin: 2%;
+  padding-left: 6%;
+  align-items: center;
+  color: red;
+}
+
+.epoxy-footer-left-img
+{
+  max-height: 80px;
+  padding-left: 30%;
+}
