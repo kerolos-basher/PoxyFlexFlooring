@@ -3291,6 +3291,50 @@ function concatMap(project, resultSelector) {
   return isFunction(resultSelector) ? mergeMap(project, resultSelector, 1) : mergeMap(project, 1);
 }
 
+// node_modules/rxjs/dist/esm5/internal/operators/debounceTime.js
+function debounceTime(dueTime, scheduler) {
+  if (scheduler === void 0) {
+    scheduler = asyncScheduler;
+  }
+  return operate(function(source, subscriber) {
+    var activeTask = null;
+    var lastValue = null;
+    var lastTime = null;
+    var emit = function() {
+      if (activeTask) {
+        activeTask.unsubscribe();
+        activeTask = null;
+        var value = lastValue;
+        lastValue = null;
+        subscriber.next(value);
+      }
+    };
+    function emitWhenIdle() {
+      var targetTime = lastTime + dueTime;
+      var now = scheduler.now();
+      if (now < targetTime) {
+        activeTask = this.schedule(void 0, targetTime - now);
+        subscriber.add(activeTask);
+        return;
+      }
+      emit();
+    }
+    source.subscribe(createOperatorSubscriber(subscriber, function(value) {
+      lastValue = value;
+      lastTime = scheduler.now();
+      if (!activeTask) {
+        activeTask = scheduler.schedule(emitWhenIdle, dueTime);
+        subscriber.add(activeTask);
+      }
+    }, function() {
+      emit();
+      subscriber.complete();
+    }, void 0, function() {
+      lastValue = activeTask = null;
+    }));
+  });
+}
+
 // node_modules/rxjs/dist/esm5/internal/operators/defaultIfEmpty.js
 function defaultIfEmpty(defaultValue) {
   return operate(function(source, subscriber) {
@@ -24449,6 +24493,7 @@ export {
   zip,
   catchError,
   concatMap,
+  debounceTime,
   defaultIfEmpty,
   take,
   mapTo,
@@ -24962,4 +25007,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-R3QC6MHM.js.map
+//# sourceMappingURL=chunk-LRFZLBW2.js.map

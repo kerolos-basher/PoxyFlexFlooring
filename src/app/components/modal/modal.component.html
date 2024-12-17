@@ -37,21 +37,27 @@
       <div class="Modal-text text-center">
         <h2>Let's see part of our work on the pool floor and how much it adds aesthetics to the floor</h2>
     </div>
-      <div class="slider-container">
-        <div class="slider2" [style.transform]="'translateX(-' + activeSlideIndex * (100 / imagesPerView) + '%)'">
-          <div class="slide" *ngFor="let image of images">
-            <img [src]="image" class alt="Slide">
+
+      <div class="slider-container" *ngIf="images.length > 0">
+        <div 
+          class="slider2" 
+          [style.transform]="'translateX(-' + activeSlideIndex * (100 / (isSmallScreen?2.2:4)) + '%)'" 
+          [style.width]="images.length * (100 / (isSmallScreen?3:4)) + '%'"
+        >
+          <div 
+            class="slide" 
+            *ngFor="let image of images; let i = index" 
+            style="width: 100%;"
+          >
+            <img [src]="image" alt="Slide" class="slide-image">
           </div>
         </div>
-        <div class="prev-button" (click)="prevSlide()">
-          &#8249;
-        </div>
-        <div class="next-button" (click)="nextSlide()">
-          &#8250;
-        </div>
+      
+        
+        <!-- Navigation Buttons -->
+        <div class="prev-button" (click)="prevSlide()">&#8249;</div>
+        <div class="next-button" (click)="nextSlide()">&#8250;</div>
       </div>
-
-
 
       <div class="modal-footer">
         <h1 class="Modal-text">

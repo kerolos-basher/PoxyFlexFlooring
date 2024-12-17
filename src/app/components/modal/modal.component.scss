@@ -48,7 +48,7 @@ mat-dialog-actions {
   // background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   opacity: 0; /* Hidden initially */
   animation: slideFromBottom  1s ease forwards; 
   overflow-y: hidden; /* Enable vertical scrolling */
@@ -190,6 +190,7 @@ body {
     flex: 0 0 50%; /* Show 2 images per view on smaller screens */
     max-width: 50%;
   }
+ 
 }
 
 
@@ -236,22 +237,46 @@ body {
 }
 
 /* Thumbnail Image */
-.thumbnail-image {
-  max-width: 95%;
-  margin-left: 30%;
-  max-height: 90%;
-  border-radius: 8px;
-  object-fit: contain;
-  display: block;
+// .thumbnail-image {
+//   max-width: 100%; /* Makes the image responsive */
+//   margin: 0 auto; /* Centers the image horizontally */
+
+//   max-height: 90%; /* Restricts the height */
+//   border-radius: 8px;
+//   object-fit: contain; /* Prevents image distortion */
+//   display: block;
+// }
+
+/* Media Query for Small Devices (max-width: 768px) */
+
+@media (max-width: 768px) {
+  .thumbnail-image {
+    max-width: 100%;
+    margin: 0 auto;
+    
+    max-height: 80%;
+    border-radius: 6px;
+  }
+ 
 }
 
-/* Media Query for Mobile Phones (max-width: 480px) */
+/* Media Query for Extra Small Devices (max-width: 480px) */
 @media (max-width: 480px) {
   .thumbnail-image {
-    max-width: 100%; /* Make it occupy full width */
-    margin-left: 1%; /* Remove left margin */
-    max-height: 70%; /* Adjust height further for small screens */
+    max-width: 100%; /* Full width for small screens */
+    margin: 0 auto;
+    max-height: 70%;
     border-radius: 4px; /* Reduce border radius */
+  }
+}
+
+/* Media Query for Large Screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .thumbnail-image {
+    max-width: 95%; /* Slightly smaller width for large screens */
+    margin-left: 30%; 
+    max-height: 85%;
+    border-radius: 10px; /* Slightly larger border radius */
   }
 }
 

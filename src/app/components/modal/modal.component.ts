@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { CommonModule } from '@angular/common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +13,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ModalComponent {
   @ViewChild('videoModal', { static: true }) videoModal: any;
   @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
-  constructor(private modalService: NgbModal) { }
+  isSmallScreen= false;
+  constructor(private modalService: NgbModal,private breakpointObserver: BreakpointObserver) { }
 
   @Output() close = new EventEmitter<void>();
   images: string[] = [
@@ -25,8 +27,17 @@ export class ModalComponent {
     
   ];
   activeSlideIndex = 0;
-  imagesPerView = 3;
+  imagesPerView = 4;
   isFullScreen = false;
+
+  ngOnInit() {
+    this.breakpointObserver
+    .observe([Breakpoints.Small, Breakpoints.XSmall])
+    .subscribe(result => {
+      this.isSmallScreen = result.matches; // True if screen matches 'Small' or 'XSmall'
+    });
+  }
+
   openVideo() {
     const video = this.videoPlayer.nativeElement;
 
@@ -53,19 +64,21 @@ export class ModalComponent {
       this.openVideo(); // Re-enter fullscreen if needed
     }
   }
-  nextSlide() {
-    if (this.activeSlideIndex < this.images.length - this.imagesPerView) {
-      this.activeSlideIndex++;
-    }
-    else {
-     // this.activeSlideIndex = 0; // Loop back to the first slide
-    }
-  }
+
   prevSlide() {
     if (this.activeSlideIndex > 0) {
       this.activeSlideIndex--;
     } else {
-      //this.activeSlideIndex = this.images.length - 1; // Loop to the last slide
+      this.activeSlideIndex = this.images.length - 1; // Loop to last slide
+    }
+  }
+  
+  // Navigate to the next slide
+  nextSlide() {
+    if (this.activeSlideIndex < this.images.length - 1) {
+      this.activeSlideIndex++;
+    } else {
+      this.activeSlideIndex = 0; // Loop back to first slide
     }
   }
   closeModal() {
