@@ -1,5 +1,5 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from '../modal/modal.component';
 
@@ -10,7 +10,7 @@ import { ModalComponent } from '../modal/modal.component';
   templateUrl: './anti-slip-poolside-solutions.component.html',
   styleUrl: './anti-slip-poolside-solutions.component.scss'
 })
-export class AntiSlipPoolsideSolutionsComponent {
+export class AntiSlipPoolsideSolutionsComponent implements OnInit{
   sections = [
 
     {
@@ -84,6 +84,13 @@ export class AntiSlipPoolsideSolutionsComponent {
   ngOnInit(): void {
     if (this.isBrowser) {
       this.onWindowScroll();
+    }
+    if (typeof window !== 'undefined') {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+      });
     }
   }
 

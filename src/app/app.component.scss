@@ -1,33 +1,33 @@
 .footer-share {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between text and icons */
-    font-family: Arial, sans-serif;
-  }
-  
-  .footer-share-text {
-    //font-weight: bold;
-    color: #333; /* Text color */
-    font-size: 16px;
-    margin: 2%;
-    padding-left: 6%;
-  }
-  
-  .footer-icons {
-    display: flex;
-    gap: 25px; /* Space between icons */
-  }
-  
-  .footer-icons fa-icon {
-    font-size: 18px; /* Adjust icon size */
-    color: #0b6838; /* Green color as seen in the image */
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .footer-icons fa-icon:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icons */
+  font-family: Arial, sans-serif;
+}
+
+.footer-share-text {
+  //font-weight: bold;
+  color: #333; /* Text color */
+  font-size: 16px;
+  margin: 2%;
+  padding-left: 6%;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 25px; /* Space between icons */
+}
+
+.footer-icons fa-icon {
+  font-size: 18px; /* Adjust icon size */
+  color: #0b6838; /* Green color as seen in the image */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer-icons fa-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
 
 .epoxy-footer
 {
@@ -36,20 +36,20 @@ background-color: #e3e3e3;;
 
 }
 .epoxy-footer-left{
-  margin: 1%;
-  padding-left: 2%;
-  align-items: center;
-  color: black;
+margin: 1%;
+padding-left: 2%;
+align-items: center;
+color: black;
 }
 .epoxy-footer-right{
-  margin: 1%;
-  padding-left: 2%;
-  align-items: center;
-  color: black;
+margin: 1%;
+padding-left: 2%;
+align-items: center;
+color: black;
 }
 
 .epoxy-footer-left-img
 {
-  max-height: 80px;
-  padding-left: 30%;
+max-height: 80px;
+padding-left: 30%;
 }

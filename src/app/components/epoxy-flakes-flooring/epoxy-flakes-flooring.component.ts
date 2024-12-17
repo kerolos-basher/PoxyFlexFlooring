@@ -85,6 +85,13 @@ export class EpoxyFlakesFlooringComponent {
     if (this.isBrowser) {
       this.onWindowScroll();
     }
+    if (typeof window !== 'undefined') {
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Optional: Adds a smooth scrolling effect
+      });
+    }
   }
 
 

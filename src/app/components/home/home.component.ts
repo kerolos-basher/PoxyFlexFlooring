@@ -96,7 +96,10 @@ export class HomeComponent implements OnInit {
       lastScrollY = window.scrollY;
     });
 
+    
+
   }
+ 
   ngOnInit(): void {
     if (this.isBrowser) {
       this.onWindowScroll();
