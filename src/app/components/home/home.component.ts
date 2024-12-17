@@ -12,42 +12,41 @@ import { RouterModule } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   sections = [
-
+    {
+      type: 'image',
+      url: 'assets/images/Home.jpg',
+      title: 'Epoxy Flakes Flooring',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
+    },
     {
       type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'anti-slip-poolside-solutions',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: 'Epoxy Marble Floors & Walls',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
       type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'designs-for-floors-walls',
+      url: 'assets/images/ChurchMarble.jpg',
+      title: 'Metallic Finish Floors',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/image1.jpg',
-      title: 'epoxy-flakes-flooring',
-      subtitle: 'epoxy-flakes-flooring',
-      redirectTo: 'epoxy-flakes-flooring'
+      url: 'assets/images/churchMarble2.jpg',
+      title: '3D Designs for Floors & Walls',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'epoxy-marble-floors-and-walls',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'epoxy-marble-floors-and-walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'metallic-finish-floors',
-      subtitle: 'metallic-finish-floors',
-      redirectTo: 'metallic-finish-floors'
-    },
+    }
   ];
   isModalOpen = false;
   selectedSection: any;

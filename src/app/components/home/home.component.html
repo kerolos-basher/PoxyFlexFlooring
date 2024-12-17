@@ -33,6 +33,7 @@
 </div>
 
 <div class="slider">
+  
   <div class="slider-dot" *ngFor="let section of sections; let i = index" [class.active]="i === activeSection"
     (click)="scrollToSection(i)"></div>
 </div>
@@ -44,7 +45,7 @@
 <!-- الأقسام -->
 
 
-<div class="parallax-section" style="background-image: url('assets/images/Home.jpg')"
+<!-- <div class="parallax-section" style="background-image: url('assets/images/Home.jpg')"
 (click)="openModal()">
   <div class="scroll-indicator">
     <i class="fa fa-chevron-down"></i>
@@ -52,17 +53,12 @@
 
 
   <div class="text-overlay">
-    <h1>Jackys Home Decor</h1>
-
-
-    <h2>
-      Transforming Floors, Walls, and Spaces Beyond Imagination
-    </h2>
+    <h1>Epoxy Flakes Flooring</h1>   
     <a href="#" class="btn" (click)="openModal()">
       Learn More
     </a>
   </div>
-</div>
+</div> -->
 
 
 <div class="parallax-section" *ngFor="let section of sections; 
@@ -77,11 +73,19 @@
     <source [src]="section.url" type="video/webm">
   </video>
   <div class="text-overlay">
-    <h2>{{ section.subtitle }}</h2>
+   <!--<h2>{{ section.subtitle }}</h2>--> 
     <h1>{{ section.title }}</h1>
-    <a [routerLink]="section.redirectTo" class="btn">
-      Learn More
-    </a>
+    @if(i==0)
+    {
+      <a href="#" class="btn" (click)="openModal()">
+        Learn More
+      </a>
+    }
+    @else {
+      <a [routerLink]="section.redirectTo" class="btn">
+        Learn More
+      </a>
+    }
   </div>
 </div>
 

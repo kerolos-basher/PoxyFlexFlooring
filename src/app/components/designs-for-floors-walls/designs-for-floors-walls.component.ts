@@ -16,35 +16,35 @@ export class DesignsForFloorsWallsComponent {
     {
       type: 'video',
       url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'anti-slip-poolside-solutions',
+      title: 'Metallic Finish Floors',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
       type: 'image',
       url: 'assets/images/image3.jpg',
-      title: 'designs-for-floors-walls',
+      title: 'Metallic Finish Floors',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
       url: 'assets/images/image1.jpg',
-      title: 'epoxy-flakes-flooring',
+      title: 'Metallic Finish Floors',
       subtitle: 'epoxy-flakes-flooring',
       redirectTo: 'epoxy-flakes-flooring'
     },
     {
       type: 'video',
       url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'epoxy-marble-floors-and-walls',
+      title: 'Metallic Finish Floors',
       subtitle: 'epoxy-marble-floors-and-walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
       url: 'assets/images/image3.jpg',
-      title: 'metallic-finish-floors',
+      title: 'Metallic Finish Floors',
       subtitle: 'metallic-finish-floors',
       redirectTo: 'metallic-finish-floors'
     },
