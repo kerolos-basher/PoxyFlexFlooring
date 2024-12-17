@@ -22,11 +22,7 @@ export class ModalComponent {
     '/assets/images/after1.jpg',
     '/assets/images/after2.jpg',
     '/assets/images/floor.jpg',
-    '/assets/images/Room.jpg',
-    '/assets/images/Church.png',
-    '/assets/images/Garage.jpg',
-    '/assets/images/floor.jpg',
-    '/assets/images/Room.jpg',
+    
   ];
   activeSlideIndex = 0;
   imagesPerView = 3;
@@ -62,14 +58,14 @@ export class ModalComponent {
       this.activeSlideIndex++;
     }
     else {
-      this.activeSlideIndex = 0; // Loop back to the first slide
+     // this.activeSlideIndex = 0; // Loop back to the first slide
     }
   }
   prevSlide() {
     if (this.activeSlideIndex > 0) {
       this.activeSlideIndex--;
     } else {
-      this.activeSlideIndex = this.images.length - 1; // Loop to the last slide
+      //this.activeSlideIndex = this.images.length - 1; // Loop to the last slide
     }
   }
   closeModal() {
