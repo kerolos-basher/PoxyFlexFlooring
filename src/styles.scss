@@ -218,8 +218,9 @@ body, html {
   }
   
   .scroll-indicator {
+    margin-bottom: 7%;
     position: absolute;
-    bottom: 15px; 
+    bottom: 50px; 
     left: 50%; 
     transform: translateX(-50%);
     font-size: 24px; 
@@ -337,3 +338,28 @@ html {
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-color: #bdbdbd #f5f5f5; /* Scrollbar thumb and track color */
 }
+
+
+.menu-container {
+  // display: flex; /* Aligns items horizontally */
+   align-items: center; /* Vertically centers content */
+ }
+ 
+ .menu-bars {
+   width: 20px; /* Width of the menu lines */
+   height: 3px; /* Thickness of the menu lines */
+   background-color: white; /* Line color */
+   margin-bottom: 5px; /* Space between the lines */
+ }
+ 
+ .menu-bars:last-child {
+   margin-bottom: 0; /* Removes margin for the last line */
+   display: block !important;
+ }
+ 
+ .menu-text {
+   margin-left: 10px; /* Spacing between the icon and the text */
+   font-family: Arial, sans-serif;
+   color: white; /* Text color */
+   font-size: 16px;
+ }

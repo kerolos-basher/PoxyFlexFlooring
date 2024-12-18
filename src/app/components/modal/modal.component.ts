@@ -21,10 +21,10 @@ export class ModalComponent {
     '/assets/images/before.jpg',
     '/assets/images/before2.jpg',
     '/assets/images/before3.jpg',
+    '/assets/images/floor.jpg',
+    '/assets/images/pool.jpg',
     '/assets/images/after1.jpg',
     '/assets/images/after2.jpg',
-    '/assets/images/floor.jpg',
-    
   ];
   activeSlideIndex = 0;
   imagesPerView = 4;
@@ -69,7 +69,7 @@ export class ModalComponent {
     if (this.activeSlideIndex > 0) {
       this.activeSlideIndex--;
     } else {
-      this.activeSlideIndex = this.images.length - 1; // Loop to last slide
+      //this.activeSlideIndex = this.images.length - 1; // Loop to last slide
     }
   }
   
@@ -78,7 +78,7 @@ export class ModalComponent {
     if (this.activeSlideIndex < this.images.length - 1) {
       this.activeSlideIndex++;
     } else {
-      this.activeSlideIndex = 0; // Loop back to first slide
+     // this.activeSlideIndex = 0; // Loop back to first slide
     }
   }
   closeModal() {

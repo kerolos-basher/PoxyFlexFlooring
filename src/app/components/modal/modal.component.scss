@@ -273,10 +273,10 @@ body {
 /* Media Query for Large Screens (min-width: 1200px) */
 @media (min-width: 1200px) {
   .thumbnail-image {
-    max-width: 95%; /* Slightly smaller width for large screens */
-    margin-left: 30%; 
+    max-width: 97%;
+    margin-left: 22%;
     max-height: 85%;
-    border-radius: 10px; /* Slightly larger border radius */
+    border-radius: 10px;
   }
 }
 
@@ -298,7 +298,7 @@ body {
 .play-button {
   position: absolute;
   top: 50%;
-  left: 78%;
+  left: 72%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);
   color: #fff;

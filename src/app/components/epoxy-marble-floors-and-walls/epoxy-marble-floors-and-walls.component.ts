@@ -14,40 +14,40 @@ export class EpoxyMarbleFloorsAndWallsComponent {
   sections = [
 
     {
-      type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'anti-slip-poolside-solutions',
-      subtitle: 'anti-slip-poolside-solutions',
-      redirectTo: 'anti-slip-poolside-solutions'
-    },
-    {
       type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'designs-for-floors-walls',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/image1.jpg',
-      title: 'epoxy-flakes-flooring',
-      subtitle: 'epoxy-flakes-flooring',
-      redirectTo: 'epoxy-flakes-flooring'
+      url: 'assets/images/Home.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'epoxy-marble-floors-and-walls',
-      subtitle: 'epoxy-marble-floors-and-walls',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'metallic-finish-floors',
-      subtitle: 'metallic-finish-floors',
-      redirectTo: 'metallic-finish-floors'
+      url: 'assets/images/ChurchMarble.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
     },
+    {
+      type: 'image',
+      url: 'assets/images/churchMarble2.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    },
+    {
+      type: 'video',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    }
   ];
   isModalOpen = false;
   selectedSection: any;

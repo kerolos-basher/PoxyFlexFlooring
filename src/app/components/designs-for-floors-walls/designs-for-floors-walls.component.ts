@@ -15,38 +15,38 @@ export class DesignsForFloorsWallsComponent {
 
     {
       type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'Metallic Finish Floors',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: '3D Designs for Floors & Walls',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
       type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'Metallic Finish Floors',
+      url: 'assets/images/ChurchMarble.jpg',
+      title: '3D Designs for Floors & Walls',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/image1.jpg',
-      title: 'Metallic Finish Floors',
-      subtitle: 'epoxy-flakes-flooring',
-      redirectTo: 'epoxy-flakes-flooring'
+      url: 'assets/images/churchMarble2.jpg',
+      title: '3D Designs for Floors & Walls',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'video',
-      url: 'assets/videos/new-watches-2021-homepage-exploration-cover.webm',
-      title: 'Metallic Finish Floors',
+      url: 'assets/videos/MarbleVideo.mp4',
+      title: '3D Designs for Floors & Walls',
       subtitle: 'epoxy-marble-floors-and-walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/image3.jpg',
-      title: 'Metallic Finish Floors',
-      subtitle: 'metallic-finish-floors',
-      redirectTo: 'metallic-finish-floors'
+      url: 'assets/images/churchMarble3.jpg',
+      title: '3D Designs for Floors & Walls',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
     },
   ];
   isModalOpen = false;

@@ -16,22 +16,22 @@ export class HomeComponent implements OnInit {
       type: 'image',
       url: 'assets/images/Home.jpg',
       title: 'Epoxy Flakes Flooring',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
+      subtitle: 'Epoxy Flakes Flooring',
+      redirectTo: 'modal'
     },
     {
       type: 'video',
       url: 'assets/videos/MarbleVideo.mp4',
       title: 'Epoxy Marble Floors & Walls',
-      subtitle: 'anti-slip-poolside-solutions',
-      redirectTo: 'anti-slip-poolside-solutions'
+      subtitle: 'epoxy-marble-floors-and-walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
       url: 'assets/images/ChurchMarble.jpg',
       title: 'Metallic Finish Floors',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
+      subtitle: 'Metallic Finish Floors',
+      redirectTo: 'metallic-finish-floors'
     },
     {
       type: 'image',
@@ -44,8 +44,8 @@ export class HomeComponent implements OnInit {
       type: 'video',
       url: 'assets/videos/MarbleVideo.mp4',
       title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'epoxy-marble-floors-and-walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
+      subtitle: 'Anti-Slip Poolside Solutions',
+      redirectTo: 'anti-slip-poolside-solutions'
     }
   ];
   isModalOpen = false;

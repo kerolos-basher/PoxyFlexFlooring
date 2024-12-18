@@ -16,35 +16,35 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
     {
       type: 'video',
       url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Epoxy Marble Floors & Walls',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
       type: 'image',
       url: 'assets/images/ChurchMarble.jpg',
-      title: 'Epoxy Marble Floors & Wallss',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
       url: 'assets/images/churchMarble2.jpg',
-      title: 'Epoxy Marble Floors & Wallss',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'video',
       url: 'assets/videos/MarbleVideo.mp4',
-      title: 'epoxy-marble-floors-and-walls',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'epoxy-marble-floors-and-walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
       url: 'assets/images/churchMarble3.jpg',
-      title: 'Epoxy Marble Floors & Wallss',
+      title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
