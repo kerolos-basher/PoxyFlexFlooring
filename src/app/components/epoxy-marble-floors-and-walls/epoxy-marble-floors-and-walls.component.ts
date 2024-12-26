@@ -12,42 +12,59 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class EpoxyMarbleFloorsAndWallsComponent {
   sections = [
-
     {
       type: 'image',
-      url: 'assets/images/Home.jpg',
-      title: 'Epoxy Marble Floors & Walls',
-      subtitle: 'Epoxy Marble Floors & Walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
-    },
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
+      url: 'assets/images/MarbleChurch/4.jpg',
       title: 'Epoxy Marble Floors & Walls',
       subtitle: 'Epoxy Marble Floors & Walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/ChurchMarble.jpg',
+      url: 'assets/images/MarbleChurch/1.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      service:'Let us see the condition of the floors before our team intervened and after we added a touch of beauty by Jackys Home Decor',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/MarbleChurch/2.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      service:'if you are looking to renovate your residential space or design unique flooring for your commercial area, our team is ready to assist you.',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/MarbleChurch/3.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      service:'Epoxy designs with marble touches, suitable for all spaces and adding a touch of luxury.',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/MarbleChurch/5.jpg',
       title: 'Epoxy Marble Floors & Walls',
       subtitle: 'Epoxy Marble Floors & Walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble2.jpg',
+      url: 'assets/images/MarbleChurch/6.jpg',
+      title: 'Epoxy Marble Floors & Walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
+      service:'Transforming Floors, Walls, and Spaces Beyond Imagination',
+      redirectTo: 'epoxy-marble-floors-and-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/MarbleChurch/7.jpg',
       title: 'Epoxy Marble Floors & Walls',
       subtitle: 'Epoxy Marble Floors & Walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Epoxy Marble Floors & Walls',
-      subtitle: 'Epoxy Marble Floors & Walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
-    }
   ];
   isModalOpen = false;
   selectedSection: any;

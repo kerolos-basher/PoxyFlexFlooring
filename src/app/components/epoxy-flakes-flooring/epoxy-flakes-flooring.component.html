@@ -31,29 +31,17 @@
   </div>
 </div>
  
-<div class="slider">
-
-  <div
-    class="slider-dot"
-    *ngFor="let section of sections; let i = index"
-    [class.active]="i === activeSection"
-  ></div>
-  
+<div>
+  <div *ngFor="let section of sections; let i = index"
+    [class.active]="i === activeSection">
+  </div>
 </div>
-
-<div class="scroll-indicator">
-  <i class="fa fa-chevron-down"></i>
-</div>
-  <!-- الأقسام -->
 
 
 <div class="parallax-section" *ngFor="let section of sections; 
      let i = index"[style.backgroundImage]="section.type === 'image' ? 
      'url(' + section.url + ')' : null">
   
-    <div class="scroll-indicator">
-        <i class="fa fa-chevron-down"></i>
-    </div>
     <video *ngIf="section.type === 'video'"  autoplay  muted loop class="background-video">
         <source [src]="section.url" type="video/webm" />
     </video>

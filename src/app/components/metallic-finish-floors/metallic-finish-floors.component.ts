@@ -12,38 +12,30 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class MetallicFinishFloorsComponent {
   sections = [
-
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Metallic Finish Floors',
-      subtitle: 'anti-slip-poolside-solutions',
-      redirectTo: 'anti-slip-poolside-solutions'
-    },
     {
       type: 'image',
-      url: 'assets/images/ChurchMarble.jpg',
+      url: 'assets/images/metalic/m1.jpg',
       title: 'Metallic Finish Floors',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble2.jpg',
+      url: 'assets/images/metalic/m2.jpg',
       title: 'Metallic Finish Floors',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
+      type: 'image',
+      url: 'assets/images/metalic/m3.jpeg',
       title: 'Metallic Finish Floors',
-      subtitle: 'epoxy-marble-floors-and-walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble3.jpg',
+      url: 'assets/images/metalic/Metalic.jpg',
       title: 'Metallic Finish Floors',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'

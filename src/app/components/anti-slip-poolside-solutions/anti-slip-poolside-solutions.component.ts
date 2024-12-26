@@ -14,40 +14,47 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
   sections = [
 
     {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Anti-Slip Poolside Solutions',
+      type: 'image',
+      url: 'assets/images/Antipoliside/1.jpg',
+      title: 'Anti-Slip Poolside',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
       type: 'image',
-      url: 'assets/images/ChurchMarble.jpg',
+      url: 'assets/images/Antipoliside/2.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble2.jpg',
+      url: 'assets/images/Antipoliside/3.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'epoxy-marble-floors-and-walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble3.jpg',
+      url: 'assets/images/Antipoliside/4.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
     },
+    {
+      type: 'image',
+      url: 'assets/images/Antipoliside/5.jpg',
+      title: 'Anti-Slip Poolside Solutions',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/Antipoliside/6.jpg',
+      title: 'Anti-Slip Poolside Solutions',
+      subtitle: 'designs-for-floors-walls',
+      redirectTo: 'designs-for-floors-walls'
+    }
   ];
   isModalOpen = false;
   selectedSection: any;

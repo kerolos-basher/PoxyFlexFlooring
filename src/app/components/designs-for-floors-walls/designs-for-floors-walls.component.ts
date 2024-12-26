@@ -12,38 +12,9 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class DesignsForFloorsWallsComponent {
   sections = [
-
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: '3D Designs for Floors & Walls',
-      subtitle: 'anti-slip-poolside-solutions',
-      redirectTo: 'anti-slip-poolside-solutions'
-    },
     {
       type: 'image',
-      url: 'assets/images/ChurchMarble.jpg',
-      title: '3D Designs for Floors & Walls',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/churchMarble2.jpg',
-      title: '3D Designs for Floors & Walls',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: '3D Designs for Floors & Walls',
-      subtitle: 'epoxy-marble-floors-and-walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/churchMarble3.jpg',
+      url: 'assets/images/3D.jpg',
       title: '3D Designs for Floors & Walls',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'

@@ -54,7 +54,14 @@
     <source [src]="section.url" type="video/webm">
   </video>
   <div class="text-overlay">
-    <h2>{{ section.title }}</h2>
+    @if(i==4)
+    {
+      <h1>{{ section.title }}</h1>
+    }
+    @else {
+      <h2>{{ section.title }}</h2>
+    }
+    
     @if(i==0)
     {
       <a href="#" class="btn" (click)="openModal()">

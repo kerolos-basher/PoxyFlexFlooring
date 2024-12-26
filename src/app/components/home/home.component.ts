@@ -14,16 +14,16 @@ export class HomeComponent implements OnInit {
   sections = [
     {
       type: 'image',
-      url: 'assets/images/IMG_2209_Original.heic',
+      url: 'assets/images/home.jpg',
       title: 'Epoxy Flakes Flooring',
       subtitle: 'Epoxy Flakes Flooring',
       redirectTo: 'modal'
     },
     {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
+      type: 'image',
+      url: 'assets/images/MarbleChurch/4.jpg',
       title: 'Epoxy Marble Floors & Walls',
-      subtitle: 'epoxy-marble-floors-and-walls',
+      subtitle: 'Epoxy Marble Floors & Walls',
       redirectTo: 'epoxy-marble-floors-and-walls'
     },
     {
@@ -41,10 +41,10 @@ export class HomeComponent implements OnInit {
       redirectTo: 'designs-for-floors-walls'
     },
     {
-      type: 'video',
-      url: 'assets/videos/MarbleVideo.mp4',
-      title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'Anti-Slip Poolside Solutions',
+      type: 'image',
+      url: 'assets/images/Antipoliside/1.jpg',
+      title: 'Anti-Slip Solutions',
+      subtitle: 'Anti-Slip Solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     }
   ];
