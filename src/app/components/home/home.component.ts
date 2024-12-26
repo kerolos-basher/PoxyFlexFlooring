@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   sections = [
     {
       type: 'image',
-      url: 'assets/images/Home.jpg',
+      url: 'assets/images/IMG_2209_Original.heic',
       title: 'Epoxy Flakes Flooring',
       subtitle: 'Epoxy Flakes Flooring',
       redirectTo: 'modal'
