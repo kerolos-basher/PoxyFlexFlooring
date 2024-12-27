@@ -20,12 +20,13 @@
           <h2>{{ section.title }}</h2>
         }
         @else if(i==1 || i==2 || i==3 || i==5)
-        {<div class="row  text-start">
-          <div class="col-2"></div>
-          <div class="col-6">
-            <h2 class="m-4">{{ section.service }}</h2>
+        {
+          <div class="row text-start"> 
+            <div class="col-2"></div>
+            <div class="col-6">
+              <h2 class="m-4" [class.visible]="isTextVisible">{{ section.service }}</h2>
+            </div>
           </div>
-        </div>
         
         }
     </div> 

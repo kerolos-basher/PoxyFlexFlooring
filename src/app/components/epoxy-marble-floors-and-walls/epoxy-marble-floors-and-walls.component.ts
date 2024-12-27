@@ -11,6 +11,8 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrl: './epoxy-marble-floors-and-walls.component.scss'
 })
 export class EpoxyMarbleFloorsAndWallsComponent {
+  isTextVisible: boolean = false;
+
   sections = [
     {
       type: 'image',
@@ -102,6 +104,9 @@ export class EpoxyMarbleFloorsAndWallsComponent {
     if (this.isBrowser) {
       this.onWindowScroll();
     }
+    setTimeout(() => {
+      this.isTextVisible = true;
+    }, 1000);
     if (typeof window !== 'undefined') {
       // Scroll to the top of the page
       window.scrollTo({
