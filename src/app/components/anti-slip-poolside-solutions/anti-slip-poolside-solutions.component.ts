@@ -12,11 +12,10 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class AntiSlipPoolsideSolutionsComponent implements OnInit{
   sections = [
-
     {
       type: 'image',
       url: 'assets/images/Antipoliside/1.jpg',
-      title: 'Anti-Slip Poolside',
+      title: 'Anti-Slip Solutions',
       subtitle: 'anti-slip-poolside-solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     },
@@ -25,6 +24,7 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       url: 'assets/images/Antipoliside/2.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
+      service:'Environmentally friendly: Materials used are free from volatile organic compounds',
       redirectTo: 'designs-for-floors-walls'
     },
     {
@@ -32,6 +32,7 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       url: 'assets/images/Antipoliside/3.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
+      service:'Let us see the condition of the floors before our team intervened and after we added a touch of beauty by Jackys Home Decor',
       redirectTo: 'designs-for-floors-walls'
     },
     {
@@ -46,6 +47,7 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       url: 'assets/images/Antipoliside/5.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
+      service:'Easy to clean and maintain: non-porous surfaces that are easy to clean and free from',
       redirectTo: 'designs-for-floors-walls'
     },
     {
@@ -53,6 +55,7 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       url: 'assets/images/Antipoliside/6.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
+      service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
       redirectTo: 'designs-for-floors-walls'
     }
   ];

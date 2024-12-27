@@ -1,6 +1,6 @@
 import {
   isPlatformBrowser
-} from "./chunk-2NGL2HJ4.js";
+} from "./chunk-PLYZETIC.js";
 import {
   CSP_NONCE,
   Inject,
@@ -24,8 +24,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-DGSZJV56.js";
-import "./chunk-W44PFRPX.js";
+} from "./chunk-LRFZLBW2.js";
 import "./chunk-J4B6MK7R.js";
 
 // node_modules/@angular/cdk/fesm2022/coercion.mjs

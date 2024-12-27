@@ -59,14 +59,7 @@ export class EpoxyMarbleFloorsAndWallsComponent {
       subtitle: 'Epoxy Marble Floors & Walls',
       service:'Transforming Floors, Walls, and Spaces Beyond Imagination',
       redirectTo: 'epoxy-marble-floors-and-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/MarbleChurch/7.jpg',
-      title: 'Epoxy Marble Floors & Walls',
-      subtitle: 'Epoxy Marble Floors & Walls',
-      redirectTo: 'epoxy-marble-floors-and-walls'
-    },
+    }
   ];
   isModalOpen = false;
   selectedSection: any;

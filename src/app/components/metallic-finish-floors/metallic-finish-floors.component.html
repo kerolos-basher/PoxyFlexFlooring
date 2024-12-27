@@ -1,13 +1,9 @@
 
 
-<div class="slider">
-
-  <div
-    class="slider-dot"
-    *ngFor="let section of sections; let i = index"
+<div>
+  <div *ngFor="let section of sections; let i = index"
     [class.active]="i === activeSection">
   </div>
-  
 </div>
 
 <div class="parallax-section" *ngFor="let section of sections; 
@@ -19,8 +15,23 @@
     </video>
     <div class="text-overlay">
         
-        <h1>{{ section.title }}</h1>
+        @if(i==0){
+          <h1>{{ section.title }}</h1>
+        }
+        @else if(i==1)
+        {
+          <h2>{{ section.service }}</h2>
+        }
+        @else if(i==2)
+        {
+          <div class="row text-start"> 
+            <div class="col-2"></div>
+            <div class="col-10">
+              <h2 class="m-4 note">{{ section.service }}</h2>
+            </div>
+          </div>
         
+        }
     </div> 
 </div>
 

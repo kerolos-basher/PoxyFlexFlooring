@@ -1,11 +1,8 @@
-
-
 <div>
   <div
     *ngFor="let section of sections; let i = index"
     [class.active]="i === activeSection">
-  </div>
-  
+  </div>  
 </div>
 
 <div class="parallax-section" *ngFor="let section of sections; 
@@ -16,9 +13,18 @@
         <source [src]="section.url" type="video/webm" />
     </video>
     <div class="text-overlay">
-
-        <h1>{{ section.title }}</h1>
-        
+        @if(i==0){
+          <h1>{{ section.title }}</h1>
+        }
+        @else
+        {
+          <div class="row text-start"> 
+            <div class="col-1"></div>
+            <div class="col-9">
+              <h2 class="note">{{ section.service }}</h2>
+            </div>
+          </div>
+        }
     </div> 
 </div>
 
