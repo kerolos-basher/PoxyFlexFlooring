@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   sections = [
     {
       type: 'image',
-      url: 'assets/images/home.jpg',
+      url: 'assets/images/PoolModal/home.jpg',
       title: 'Epoxy Flakes Flooring',
       subtitle: 'Epoxy Flakes Flooring',
       redirectTo: 'modal'
@@ -112,7 +112,9 @@ export class HomeComponent implements OnInit {
     if (this.isBrowser) {
       this.onWindowScroll();
     }
+    
   }
+  
   scrollToSection(index: number): void {
     const sections = document.querySelectorAll('.parallax-section');
     if (sections[index]) {
