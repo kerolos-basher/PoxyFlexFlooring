@@ -2,13 +2,21 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ModalComponent } from "../modal/modal.component";
 import { RouterModule } from '@angular/router';
-
+import { 
+  faFacebookF, 
+  faInstagram,
+  faXTwitter, 
+  faLinkedinIn, 
+  faPinterestP, 
+  faWeibo 
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, ModalComponent,RouterModule]
+  imports: [CommonModule, ModalComponent,RouterModule,FontAwesomeModule  ]
 })
 export class HomeComponent implements OnInit {
   sections = [

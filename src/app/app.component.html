@@ -1,5 +1,5 @@
 <router-outlet />
-<div class="footer-share m-5 p-5">
+<div class="footer-share ">
   <span class="footer-share-text">Follow us</span>
   <div class="footer-icons">
     <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
@@ -10,27 +10,57 @@
     <fa-icon [icon]="['fab', 'weibo']"></fa-icon>
   </div>
 </div>
-<div class="row epoxy-footer">
-  <div class="col-6 epoxy-footer-left">
-    <div>
-      <img class="epoxy-footer-left-img" src="assets/images/logo.png" alt="Logo">
+<footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Section (Left Side) -->
+      <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
+        <img src="assets/images/logo.png" alt="Logo" class="img-fluid" style="max-width: 150px;">
+      </div>
+
+      <!-- Links Section (Right Side) -->
+      <div class="col-md-9">
+        <div class="row text-center text-md-start">
+          <!-- Column 1 -->
+          <div class="col-md-3 col-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Home</h5>
+            <ul class="list-unstyled">
+              <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="col-md-3 col-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Anti-Slip</h5>
+            <ul class="list-unstyled">
+              <li><a href="/anti-slip-poolside-solutions" class="text-light text-decoration-none">Poolside Solutions</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="col-md-3 col-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Designs</h5>
+            <ul class="list-unstyled">
+              <li><a href="/designs-for-floors-walls" class="text-light text-decoration-none">Floors & Walls</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="col-md-3 col-6 mb-4">
+            <h5 class="text-uppercase fw-bold">Epoxy Flooring</h5>
+            <ul class="list-unstyled">
+              <li><a href="/epoxy-flakes-flooring" class="text-light text-decoration-none">Flakes Flooring</a></li>
+              <li><a href="/epoxy-marble-floors-and-walls" class="text-light text-decoration-none">Marble Floors</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h1>Jackys Home Decor</h1>
+
+    <!-- Footer Bottom -->
+    <div class="text-center mt-4">
+      <p class="mb-0">&copy; 2024 Jackys Home Decor. All Rights Reserved.</p>
     </div>
   </div>
-  <div class="col-6 epoxy-footer-right">
-    <h2>Our Values</h2>
-    <ul>
-      <li>
-        <h3><span style="font-size: larger;">Creativity:</span> Turning spaces into innovative works of art</h3>
-      </li>
-      <li>
-        <h3><span style="font-size: larger;">Quality:</span> Delivering the highest standards of craftsmanship using the best materials</h3>
-      </li>
-      <li>
-        <h3><span style="font-size: larger;">Commitment:</span> Exceptional service that ensures customer satisfaction.</h3>
-      </li>
-    </ul>
-  </div>
-</div>
+</footer>
+

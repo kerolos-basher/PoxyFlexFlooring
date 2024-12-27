@@ -245,13 +245,6 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-footer {
-    background-color: lightgray;
-    color: black;
-    font-size: 14px;
-    //padding: 40px 20px;
-    line-height: 1.6;
-}
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -310,11 +303,6 @@ body.modal-open {
 
 
 
-
-
-
-
-
 /* Custom Scrollbar for Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 6px; /* Width of the scrollbar */
@@ -363,3 +351,16 @@ html {
    color: white; /* Text color */
    font-size: 16px;
  }
+ footer ul li a:hover {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+footer img {
+  max-width: 200px; /* Adjust for better visibility */
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
