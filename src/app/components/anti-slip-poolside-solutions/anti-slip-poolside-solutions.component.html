@@ -14,7 +14,12 @@
     </video>
     <div class="text-overlay">
         @if(i==0){
-          <h1>{{ section.title }}</h1>
+          <div class="row text-start"> 
+            <div class="col-1"></div>
+            <div class="col-9">
+              <h2 class="note">{{ section.subtitle }}</h2>
+            </div>
+          </div>
         }
         @else
         {

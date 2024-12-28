@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     {
       type: 'image',
       url: 'assets/images/Antipoliside/1.jpg',
-      title: 'Anti-Slip Solutions',
+      title: 'Discover the beauty of flake flooring with the added safety of our anti-slip feature!',
       subtitle: 'Anti-Slip Solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     }

@@ -15,8 +15,8 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
     {
       type: 'image',
       url: 'assets/images/Antipoliside/1.jpg',
-      title: 'Anti-Slip Solutions',
-      subtitle: 'anti-slip-poolside-solutions',
+      title: 'Epoxy Flakes Flooring',
+      subtitle: 'Explore more flake flooring options, now with enhanced anti-slip technology for your peace of mind',
       redirectTo: 'anti-slip-poolside-solutions'
     },
     {
@@ -56,6 +56,30 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
       service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
+      redirectTo: 'designs-for-floors-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/PoolModal/pool3.jpg',
+      title: 'Anti-Slip Poolside Solutions',
+      subtitle: 'designs-for-floors-walls',
+      service:'Stylish flake flooring with anti-slip protection—perfect for pools and wet areas.',
+      redirectTo: 'designs-for-floors-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/PoolModal/pool2.jpg',
+      title: 'Anti-Slip Poolside Solutions',
+      subtitle: 'designs-for-floors-walls',
+      service:'Dive into safety and style with our flake flooring, designed for poolside perfection.',
+      redirectTo: 'designs-for-floors-walls'
+    },
+    {
+      type: 'image',
+      url: 'assets/images/PoolModal/pool4.jpg',
+      title: 'Anti-Slip Poolside Solutions',
+      subtitle: 'designs-for-floors-walls',
+      //service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
       redirectTo: 'designs-for-floors-walls'
     }
   ];
