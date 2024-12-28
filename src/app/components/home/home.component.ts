@@ -36,14 +36,14 @@ export class HomeComponent implements OnInit {
     },
     {
       type: 'image',
-      url: 'assets/images/ChurchMarble.jpg',
+      url: 'assets/images/metalic/m1.jpg',
       title: 'Metallic Finish Floors',
       subtitle: 'Metallic Finish Floors',
       redirectTo: 'metallic-finish-floors'
     },
     {
       type: 'image',
-      url: 'assets/images/churchMarble2.jpg',
+      url: 'assets/images/3D.jpg',
       title: '3D Designs for Floors & Walls',
       subtitle: 'designs-for-floors-walls',
       redirectTo: 'designs-for-floors-walls'
@@ -102,9 +102,7 @@ export class HomeComponent implements OnInit {
         navbar?.classList.remove('hide');
       }
       lastScrollY = window.scrollY;
-    });
-
-    
+    });   
 
   }
  

@@ -1,5 +1,4 @@
 <div class="container text-center">
- 
   <div class="modal-overlay " (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
       <button type="button" class="close-button" aria-label="Close" (click)="closeModal()">
@@ -11,7 +10,6 @@
         </h1>
       </div>
       <div class="container text-center">
-        <!-- Video Thumbnail -->
         <div class="video-thumbnail" (click)="openVideo()" [ngClass]="{'fullscreen': isFullScreen}">
           <img src="assets/images/PoolModal/home.jpg" alt="Video Thumbnail" class="thumbnail-image">
           <button class="play-button" aria-label="Play Video">
@@ -39,41 +37,28 @@
       </div>
 
       <div class="slider-container" *ngIf="images.length > 0">
-        
         <div 
           class="slider2" 
           [style.transform]="'translateX(-' + activeSlideIndex * (100 / (isSmallScreen?2.2:4)) + '%)'" 
-          [style.width]="images.length * (100 / (isSmallScreen?3:4)) + '%'"
-        >
+          [style.width]="images.length * (100 / (isSmallScreen?3:4)) + '%'">
           <div 
-            class="slide" 
+            class="slide"
             *ngFor="let image of images; let i = index" 
-            style="width: 100%;"
-          >
+            style="width: 100%;" >
             <img [src]="image" alt="Slide" class="slide-image">
           </div>
         </div>
       
-        
         <!-- Navigation Buttons -->
         <div class="prev-button" (click)="prevSlide()">&#8249;</div>
         <div class="next-button" (click)="nextSlide()">&#8250;</div>
       </div>
 
-      <div >
+      <div>
         <h1 class="Modal-text text-center">
           Unique flooring with flakes in vibrant colors, resistant to oils and chemicals
         </h1>
         <h1 class="Modal-text note">The anti-slip feature can be applied to marble, flakes, and metallic flooring.</h1>
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <h1 class="Modal-text">
-              
-            </h1>
-          </div>
-          <div class="col-2"></div>
-        </div>
       </div>
     </div>
   </div>
