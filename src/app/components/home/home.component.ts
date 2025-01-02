@@ -50,8 +50,8 @@ export class HomeComponent implements OnInit {
     },
     {
       type: 'image',
-      url: 'assets/images/Antipoliside/1.jpg',
-      title: 'Discover the beauty of flake flooring with the added safety of our anti-slip feature!',
+      url: 'assets/images/Antipoliside/Anti1.jpg',
+      title: 'Anti-Slip Feature',
       subtitle: 'Anti-Slip Solutions',
       redirectTo: 'anti-slip-poolside-solutions'
     }
@@ -88,8 +88,7 @@ export class HomeComponent implements OnInit {
         this.activeSection = index; // تحديث القسم النشط
       }
     });
-
-
+    
     let lastScrollY = window.scrollY;
     const navbar = document.querySelector('.navbar-container');
     

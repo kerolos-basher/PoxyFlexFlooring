@@ -14,50 +14,58 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
   sections = [
     {
       type: 'image',
-      url: 'assets/images/Antipoliside/1.jpg',
+      url: 'assets/images/Antipoliside/Anti1.jpg',
       title: 'Epoxy Flakes Flooring',
-      subtitle: 'Explore more flake flooring options, now with enhanced anti-slip technology for your peace of mind',
+      subtitle: 'If your swimming pool has a leak, we provide immediate and precise repair solutions using advanced epoxy, ensuring a tight and secure seal that restores the full efficiency of your pool',
       redirectTo: 'anti-slip-poolside-solutions'
-    },
+    }, 
     {
       type: 'image',
-      url: 'assets/images/Antipoliside/2.jpg',
+      url: 'assets/images/Antipoliside/BeforeWork.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
-      service:'Environmentally friendly: Materials used are free from volatile organic compounds',
+      service:'Let us see part of our work on the pool floor and how much it adds aesthetics to the floor',
       redirectTo: 'designs-for-floors-walls'
     },
     {
-      type: 'image',
-      url: 'assets/images/Antipoliside/3.jpg',
+      type: 'video',
+      url: 'assets/videos/IMG_9501.mov',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
-      service:'Let us see the condition of the floors before our team intervened and after we added a touch of beauty by Jackys Home Decor',
+      //service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
       redirectTo: 'designs-for-floors-walls'
     },
-    {
-      type: 'image',
-      url: 'assets/images/Antipoliside/4.jpg',
-      title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'designs-for-floors-walls',
-      redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/Antipoliside/5.jpg',
-      title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'designs-for-floors-walls',
-      service:'Easy to clean and maintain: non-porous surfaces that are easy to clean and free from',
-      redirectTo: 'designs-for-floors-walls'
-    },
-    {
-      type: 'image',
-      url: 'assets/images/Antipoliside/6.jpg',
-      title: 'Anti-Slip Poolside Solutions',
-      subtitle: 'designs-for-floors-walls',
-      service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
-      redirectTo: 'designs-for-floors-walls'
-    },
+    // {
+    //   type: 'image',
+    //   url: 'assets/images/Antipoliside/3.jpg',
+    //   title: 'Anti-Slip Poolside Solutions',
+    //   subtitle: 'designs-for-floors-walls',
+    //   service:'Let us see part of our work on the pool floor and how much it adds aesthetics to the floor',
+    //   redirectTo: 'designs-for-floors-walls'
+    // },
+    // {
+    //   type: 'image',
+    //   url: 'assets/images/Antipoliside/4.jpg',
+    //   title: 'Anti-Slip Poolside Solutions',
+    //   subtitle: 'designs-for-floors-walls',
+    //   redirectTo: 'designs-for-floors-walls'
+    // },
+    // {
+    //   type: 'image',
+    //   url: 'assets/images/Antipoliside/5.jpg',
+    //   title: 'Anti-Slip Poolside Solutions',
+    //   subtitle: 'designs-for-floors-walls',
+    //   service:'Easy to clean and maintain: non-porous surfaces that are easy to clean and free from',
+    //   redirectTo: 'designs-for-floors-walls'
+    // },
+    // {
+    //   type: 'image',
+    //   url: 'assets/images/Antipoliside/6.jpg',
+    //   title: 'Anti-Slip Poolside Solutions',
+    //   subtitle: 'designs-for-floors-walls',
+    //   service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
+    //   redirectTo: 'designs-for-floors-walls'
+    // },
     {
       type: 'image',
       url: 'assets/images/PoolModal/pool3.jpg',
@@ -79,7 +87,7 @@ export class AntiSlipPoolsideSolutionsComponent implements OnInit{
       url: 'assets/images/PoolModal/pool4.jpg',
       title: 'Anti-Slip Poolside Solutions',
       subtitle: 'designs-for-floors-walls',
-      //service:'Durability and strength: Highly resistant to wear and scratches, capable of handling heavy loads, making it perfect for industrial spaces',
+      //service:'We offer a unique service in our company, where we can repair and restore any cracked or broken marble using epoxy, whether it’s flooring, walls, or even artistic pieces. We bring marble back to its natural beauty with the highest quality, making us leaders in epoxy flooring services',
       redirectTo: 'designs-for-floors-walls'
     }
   ];

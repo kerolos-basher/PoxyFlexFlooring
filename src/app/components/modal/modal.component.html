@@ -29,11 +29,10 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <div class="Modal-text text-center">
-        
+
+      <!-- <div class="Modal-text text-center">        
         <h1>Elegant yet practical anti-slip floors, perfect for wet areas</h1>
         <h2 class="note">Let's see part of our work on the pool floor and how much it adds aesthetics to the floor</h2>
-       
       </div>
 
       <div class="slider-container" *ngIf="images.length > 0">
@@ -48,17 +47,40 @@
             <img [src]="image" alt="Slide" class="slide-image">
           </div>
         </div>
-      
-        <!-- Navigation Buttons -->
+        
         <div class="prev-button" (click)="prevSlide()">&#8249;</div>
         <div class="next-button" (click)="nextSlide()">&#8250;</div>
+      </div> -->
+
+      <div>
+        <h1 class="Modal-text text-center">
+          Before epoxy flake flooring, floors often look outdated and fail to withstand heavy wear and tear
+        </h1>
+        <h1 class="Modal-text note">Say goodbye to chipped, uneven surfaces and hello to a durable transformation</h1>
+      </div>
+
+      <div class="slider-container" *ngIf="images2.length > 0">
+        <div 
+          class="slider2" 
+          [style.transform]="'translateX(-' + activeSlideIndex2 * (100 / (isSmallScreen?2.2:4)) + '%)'" 
+          [style.width]="images2.length * (100 / (isSmallScreen?3:4)) + '%'">
+          <div 
+            class="slide"
+            *ngFor="let image of images2; let i = index" 
+            style="width: 100%;" >
+            <img [src]="image" alt="Slide" class="slide-image">
+          </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="prev-button" (click)="prevSlide2()">&#8249;</div>
+        <div class="next-button" (click)="nextSlide2()">&#8250;</div>
       </div>
 
       <div>
         <h1 class="Modal-text text-center">
           Unique flooring with flakes in vibrant colors, resistant to oils and chemicals
         </h1>
-        <h1 class="Modal-text note">The anti-slip feature can be applied to marble, flakes, and metallic flooring.</h1>
+        <h1 class="Modal-text note">After our epoxy flake treatment, enjoy a sleek, polished finish that elevates any room.</h1>
       </div>
     </div>
   </div>

@@ -9,12 +9,13 @@
      let i = index"[style.backgroundImage]="section.type === 'image' ? 
      'url(' + section.url + ')' : null">
 
-    <video *ngIf="section.type === 'video'"  autoplay  muted loop class="background-video">
+    <video *ngIf="section.type === 'video'"  autoplay muted loop class="background-video">
         <source [src]="section.url" type="video/webm" />
     </video>
     <div class="text-overlay">
         @if(i==0){
-          <div class="row text-start"> 
+          <h1 class="note">Anti-Slip Feature</h1>
+          <div class="row text-start mt-4"> 
             <div class="col-1"></div>
             <div class="col-9">
               <h2 class="note">{{ section.subtitle }}</h2>

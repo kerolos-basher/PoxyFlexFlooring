@@ -17,6 +17,15 @@ export class ModalComponent {
   constructor(private modalService: NgbModal,private breakpointObserver: BreakpointObserver) { }
 
   @Output() close = new EventEmitter<void>();
+  images2: string[] = [
+    '/assets/images/PoolModal/Flax3.jpg',
+    '/assets/images/PoolModal/Flax4.jpg',
+    '/assets/images/PoolModal/Flax2.jpg',
+    '/assets/images/PoolModal/Flax1.jpg',
+    '/assets/images/PoolModal/Flax6.jpg',
+    '/assets/images/PoolModal/Flax8.jpg',
+    '/assets/images/PoolModal/Flax9.jpg'
+  ];
   images: string[] = [
     '/assets/images/PoolModal/8.jpg',
     '/assets/images/PoolModal/9.jpg',
@@ -27,6 +36,7 @@ export class ModalComponent {
     '/assets/images/PoolModal/6.jpg',
   ];
   activeSlideIndex = 0;
+  activeSlideIndex2 = 0;
   imagesPerView = 4;
   isFullScreen = false;
 
@@ -81,6 +91,26 @@ export class ModalComponent {
      // this.activeSlideIndex = 0; // Loop back to first slide
     }
   }
+
+
+
+  prevSlide2() {
+    if (this.activeSlideIndex2 > 0) {
+      this.activeSlideIndex2--;
+    } else {
+      //this.activeSlideIndex = this.images.length - 1; // Loop to last slide
+    }
+  }
+  
+  // Navigate to the next slide
+  nextSlide2() {
+    if (this.activeSlideIndex2 < this.images2.length - 1) {
+      this.activeSlideIndex2++;
+    } else {
+     // this.activeSlideIndex = 0; // Loop back to first slide
+    }
+  }
+
   closeModal() {
     this.close.emit();
   }
