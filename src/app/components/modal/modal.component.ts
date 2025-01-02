@@ -18,13 +18,20 @@ export class ModalComponent {
 
   @Output() close = new EventEmitter<void>();
   images2: string[] = [
+    '/assets/images/PoolModal/8.jpg',
+    '/assets/images/PoolModal/9.jpg',
+    '/assets/images/PoolModal/2.jpg',
+    '/assets/images/PoolModal/3.jpg',
+    '/assets/images/PoolModal/4.jpg',
+    '/assets/images/PoolModal/5.jpg',
+    '/assets/images/PoolModal/6.jpg',
     '/assets/images/PoolModal/Flax3.jpg',
     '/assets/images/PoolModal/Flax4.jpg',
     '/assets/images/PoolModal/Flax2.jpg',
     '/assets/images/PoolModal/Flax1.jpg',
     '/assets/images/PoolModal/Flax6.jpg',
+    '/assets/images/PoolModal/Flax9.jpg',
     '/assets/images/PoolModal/Flax8.jpg',
-    '/assets/images/PoolModal/Flax9.jpg'
   ];
   images: string[] = [
     '/assets/images/PoolModal/8.jpg',
