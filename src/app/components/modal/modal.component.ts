@@ -54,8 +54,8 @@ export class ModalComponent {
       this.isSmallScreen = result.matches; // True if screen matches 'Small' or 'XSmall'
     });
   }
-
-  openVideo() {
+ 
+  openVideo() { 
     const video = this.videoPlayer.nativeElement;
 
     // Request Fullscreen with type assertions for Safari or older browsers

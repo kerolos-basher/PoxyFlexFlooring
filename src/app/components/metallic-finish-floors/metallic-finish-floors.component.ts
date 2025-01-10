@@ -35,6 +35,14 @@ export class MetallicFinishFloorsComponent {
       service:'Metallic epoxy floors offer a stunning, durable, and modern flooring solution. With their unique shimmering effects and seamless finish, they create a luxurious look perfect for residential, commercial, and industrial spaces. Easy to clean and highly resistant to wear, metallic epoxy floors combine beauty with practicality.',
       redirectTo: 'designs-for-floors-walls'
     },
+    {
+      type: 'image',
+      url: 'assets/images/metalic/Metalic.jpg',
+      title: '',
+      subtitle: '',
+      service:'',
+      redirectTo: 'designs-for-floors-walls'
+    },
     
     
   ];
