@@ -2,23 +2,25 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ModalComponent } from "../modal/modal.component";
 import { RouterModule } from '@angular/router';
-import { 
-  faFacebookF, 
+import {
+  faFacebookF,
   faInstagram,
-  faXTwitter, 
-  faLinkedinIn, 
-  faPinterestP, 
-  faWeibo 
+  faXTwitter,
+  faLinkedinIn,
+  faPinterestP,
+  faWeibo
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SliderModalComponent } from "../slider-modal/slider-modal.component";
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  imports: [CommonModule, ModalComponent,RouterModule,FontAwesomeModule  ]
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    imports: [CommonModule, ModalComponent, RouterModule, FontAwesomeModule, SliderModalComponent]
 })
 export class HomeComponent implements OnInit {
+ 
   sections = [
     {
       type: 'image',
@@ -45,7 +47,12 @@ export class HomeComponent implements OnInit {
       type: 'image',
       url: 'assets/images/3D.jpg',
       title: '3D Designs for Floors & Walls',
-      subtitle: 'designs-for-floors-walls',
+      subtitle: '3D Designs for Floors & Walls',
+      images: [
+        'assets/images/3D1.jpg',
+        'assets/images/3D2.jpg',
+        'assets/images/3D3.jpg'
+      ],
       redirectTo: 'designs-for-floors-walls'
     },
     {
@@ -56,18 +63,9 @@ export class HomeComponent implements OnInit {
       redirectTo: 'anti-slip-poolside-solutions'
     }
   ];
+
   isModalOpen = false;
-  selectedSection: any;
-
-  openModal() {
-
-    this.isModalOpen = true;
-    document.body.classList.add('modal-open');
-  }
-
-  closeModal() {
-    this.isModalOpen = false;
-  }
+  // sliderImages: string[] = [];
   activeSection = 0;
   isBrowser: boolean;
 
@@ -75,48 +73,60 @@ export class HomeComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
-  @HostListener('window:scroll', [])
-
-  onWindowScroll(): void {
-    if (!this.isBrowser) return;
-
-    const sections = document.querySelectorAll('.parallax-section');
-
-    sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-        this.activeSection = index; // تحديث القسم النشط
-      }
-    });
-    
-    let lastScrollY = window.scrollY;
-    const navbar = document.querySelector('.navbar-container');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        navbar?.classList.add('hide');
-      } else {
-        // Scrolling up
-        navbar?.classList.remove('hide');
-      }
-      lastScrollY = window.scrollY;
-    });   
-
-  }
- 
   ngOnInit(): void {
     if (this.isBrowser) {
       this.onWindowScroll();
     }
-    
   }
-  
+
+  openModal() {
+    console.log('openModal called'); // Debugging log
+    this.isModalOpen = true;
+    document.body.classList.add('modal-open');
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    document.body.classList.remove('modal-open');
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    if (!this.isBrowser) return;
+
+    const sections = document.querySelectorAll('.parallax-section');
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        this.activeSection = index;
+      }
+    });
+  }
+
   scrollToSection(index: number): void {
     const sections = document.querySelectorAll('.parallax-section');
     if (sections[index]) {
       sections[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-      this.activeSection = index; // Update the active section
+      this.activeSection = index;
     }
+  }
+
+  isSliderModalOpen = false;
+  sliderImages: string[] = [];
+
+  openSliderModal(images: string[]) {
+    if (images && images.length > 0) {
+      this.sliderImages = images;
+      this.isSliderModalOpen = true;
+      document.body.classList.add('modal-open');
+    } else {
+      console.warn('No images available for this slider modal.');
+    }
+  }
+  
+  closeSliderModal() {
+    this.isSliderModalOpen = false;
+    this.sliderImages = [];
+    document.body.classList.remove('modal-open');
   }
 }

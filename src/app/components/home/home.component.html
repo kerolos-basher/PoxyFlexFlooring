@@ -1,50 +1,33 @@
 
 
-<div class="slider">
-  
-  <div class="slider-dot" *ngFor="let section of sections; let i = index" [class.active]="i === activeSection"
-    (click)="scrollToSection(i)"></div>
-</div>
-
-
-<div class="scroll-indicator">
-  <i class="fa fa-chevron-down"></i>
-</div>
-<!-- الأقسام -->
-
-<div class="parallax-section" *ngFor="let section of sections; 
-     let i = index" [style.backgroundImage]="section.type === 'image' ? 
-     'url(' + section.url + ')' : null">
+ <div class="parallax-section" *ngFor="let section of sections; let i = index"
+     [style.backgroundImage]="section.type === 'image' ? 'url(' + section.url + ')' : null">
 
   <div class="scroll-indicator">
     <i class="fa fa-chevron-down"></i>
   </div>
+
   <video *ngIf="section.type === 'video'" autoplay muted loop class="background-video">
     <source [src]="section.url" type="video/webm">
   </video>
+
   <div class="text-overlay">
-    @if(i==4)
-    {
-      <h1>{{ section.title }}</h1>
-    }
-    @else {
-      <h2>{{ section.title }}</h2>
-    }
-    
-    @if(i==0)
-    {
-      <a href="#" class="btn" (click)="openModal()">
-        Learn More
-      </a>
-    }
-    @else {
-      <a [routerLink]="section.redirectTo" class="btn">
-        Learn More
-      </a>
-    }
+    <h1 *ngIf="i === 4">{{ section.title }}</h1>
+    <h2 *ngIf="i !== 4">{{ section.title }}</h2>
+
+    <a href="#" class="btn" *ngIf="i === 0" (click)="openModal()">Learn More</a>
+
+    <a href="#" class="btn" *ngIf="i === 3 && section.images?.length" 
+       (click)="openSliderModal(section.images!)">
+      Learn More
+    </a>
+    <a [routerLink]="section.redirectTo" class="btn" *ngIf="i !== 0 && i !== 3">Learn More</a>
   </div>
 </div>
 
-<app-modal *ngIf="isModalOpen" (close)="closeModal()"></app-modal>
-
-
+<!-- New Slider Modal -->
+<app-modal *ngIf="isModalOpen" (close)="closeModal()">
+  <p>This is the default modal content.</p>
+</app-modal>
+<app-slider-modal *ngIf="isSliderModalOpen" [images]="sliderImages" (close)="closeSliderModal()">
+</app-slider-modal>

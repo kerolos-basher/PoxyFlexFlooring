@@ -1,0 +1,12 @@
+<div class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-btn" (click)="closeModal()">×</button>
+      <div class="slider">
+        <button class="prev-btn" (click)="prevSlide()">‹</button>
+        <div *ngFor="let img of images; let idx = index" [class.active]="idx === activeSlide" class="slide">
+          <img [src]="img" alt="Slide {{ idx + 1 }}">
+        </div>
+        <button class="next-btn" (click)="nextSlide()">›</button>
+      </div>
+    </div>
+  </div>
